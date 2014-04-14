@@ -14,6 +14,10 @@
   <% @tipo_roles = ["Alumno","Docente","Auxiliar de educación"] %>
 
   <div class="row">
+    <h4>Datos Personales</h4>
+  </div>
+
+  <div class="row">
     <div class="span12">
       <div class="control-group success">
         <label class="control-label"><strong>Nombres y apellidos:</strong></label>
@@ -138,10 +142,14 @@
       <div class="control-group success">
         <label class="control-label"><strong>Teléfono de contacto:</strong></label>
         <div class="controls">
-          <%= f.text_field :telefono_contacto %>
+          <%= f.text_field :telefono_contacto, :id => "poronga" %>
         </div>
       </div>
     </div>    
+  </div>
+
+  <div class="row">
+    <h4>Condición</h4>
   </div>
 
   <hr/>
@@ -151,7 +159,7 @@
       <div class="control-group success">
         <label class="control-label"><strong>Indique su condición:</strong></label>
         <div class="controls">
-          <select name="tipo_roles" id="relevamiento_rol">
+          <select name="relevamiento[rol]" id="relevamiento_rol">
           <option selected="selected" value="1">Seleccione una función</option>
             <% @tipo_roles.each do |tp| %>
               <option value="<%=tp%>"><%=tp%></option>
@@ -165,6 +173,11 @@
   <hr/>
 
   <div id="alumno">
+    <div class="row">
+      <h4>Alumno</h4>
+      <hr/>
+    </div>
+
     <div class="row">
       <div class="span12">
         <div class="control-group success">
@@ -187,46 +200,17 @@
       </div>
     </div>
     <div id="regular">
-      <div class="row">
-        <div class="span6">
-          <div class="control-group success">
-            <label class="control-label"><strong>Cantidad de cuadras a la escuela:</strong></label>
-            <div class="controls">
-              <%= f.number_field :cant_cuadras, :class => "input_alumno", :id => "input_cant_cuadras_alumno" %>
-            </div>
-          </div>
-        </div>
-        <div class="span6">
-          <div class="control-group success">
-            <label class="control-label"><strong>Cantidad de kilómetros a la escuela:</strong></label>
-            <div class="controls">
-              <%= f.text_field :distancia_km, :id => "input_distancia_km_alumno" %>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </div>
 
   <div id="docente">
+
     <div class="row">
-      <div class="span6">
-        <div class="control-group success">
-          <label class="control-label"><strong>Cantidad de cuadras a la escuela:</strong></label>
-          <div class="controls">
-            <%= f.number_field :cant_cuadras, :id => "input_cant_cuadras_docente" %>
-          </div>
-        </div>
-      </div>
-      <div class="span6">
-        <div class="control-group success">
-          <label class="control-label"><strong>Cantidad de kilómetros a la escuela:</strong></label>
-          <div class="controls">
-            <%= f.text_field :distancia_km, :id => "input_distancia_km_docente" %>
-          </div>
-        </div>
-      </div>
+      <h4>Docente</h4>
+      <hr/>
     </div>
+    
     <div class="row">
       <div class="span12">
         <div class="control-group success">
@@ -272,24 +256,12 @@
   </div>
 
   <div id="aux">
+
     <div class="row">
-      <div class="span6">
-        <div class="control-group success">
-          <label class="control-label"><strong>Cantidad de cuadras a la escuela:</strong></label>
-          <div class="controls">
-            <%= f.number_field :cant_cuadras, :id => "input_cant_cuadras_aux" %>
-          </div>
-        </div>
-      </div>
-      <div class="span6">
-        <div class="control-group success">
-          <label class="control-label"><strong>Cantidad de kilómetros a la escuela:</strong></label>
-          <div class="controls">
-            <%= f.text_field :distancia_km, :id => "input_distancia_km_aux" %>
-          </div>
-        </div>
-      </div>
+      <h4>Auxiliar de educación</h4>
+      <hr/>
     </div>
+    
     <div class="row">
       <div class="span12">
         <div class="control-group success">
@@ -313,9 +285,33 @@
       </div>
     </div>
   </div>
+  <div id="cuadras" class="row">
+    <hr/>
+    <div class="row">
+      <h4>Distancia a la Escuela</h4>
+      <hr/>
+    </div>
+    
+    <div class="span6">
+      <div class="control-group success">
+        <label class="control-label"><strong>Cantidad de cuadras a la escuela:</strong></label>
+        <div class="controls">
+          <%= f.number_field :cant_cuadras, :class => "input_alumno", :id => "input_cant_cuadras" %>
+        </div>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="control-group success">
+        <label class="control-label"><strong>Cantidad de kilómetros a la escuela:</strong></label>
+        <div class="controls">
+          <%= f.text_field :distancia_km, :id => "input_distancia_km" %>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "btn btn-primary" %>
   </div>
 <% end %>
 
@@ -327,18 +323,27 @@
     $("#regular").addClass('hidden');
     $("#docente_activo").addClass('hidden');
     $("#aux_activo").addClass('hidden');
-    $("#frente_alumno").addClass('hidden');
+    $("#frente_alumno").addClass('hidden');    
+    $("#cuadras").addClass('hidden');
 
     $( "#relevamiento_rol" ).change(function() {
       if ($( "#relevamiento_rol option:selected" ).text() == "Alumno"){
+
+      if ($("#check_alumno_regular").attr("checked") == "checked"){
+        $("#cuadras").removeClass('hidden');
+      } else {
+        $("#cuadras").addClass('hidden');
+      }
+
+
         //habilito todo lo de alumno
         $("#alumno").removeClass('hidden');
 
         //acá oculto todo lo de aux
         $("#aux").addClass('hidden');
         $("#aux_activo").addClass('hidden');
-        $("#input_cant_cuadras_aux").val(""); 
-        $("#input_distancia_km_aux").val("");
+        //$("#input_cant_cuadras_aux").val(""); 
+        //$("#input_distancia_km_aux").val("");
         $("#check_activo_pasivo_aux").prop("checked",false);
         $("#input_lugar_auxiliares").val("");
 
@@ -347,8 +352,8 @@
         $("#docente_activo").addClass('hidden');
         $("#frente_alumno").addClass('hidden');
 
-        $("#input_cant_cuadras_docente").val(""); 
-        $("#input_distancia_km_docente").val("");
+        $("#input_cant_cuadras").val(""); 
+        $("#input_distancia_km").val("");
         $("#check_activo_pasivo_docente").prop("checked",false);
         $("#check_frente_alumnos").prop("checked",false);
         $("#input_grado_docente").val("");
@@ -356,8 +361,24 @@
 
       };
       if ($( "#relevamiento_rol option:selected" ).text() == "Docente"){
+
+        if ($("#check_activo_pasivo_docente").attr("checked") == "checked"){
+          $("#docente_activo").removeClass('hidden');
+        } else {
+          $("#docente_activo").addClass('hidden');
+        }
+
+      
+        if ($("#check_frente_alumnos").attr("checked") == "checked"){
+          $("#frente_alumno").removeClass('hidden');
+        } else {
+          $("#frente_alumno").addClass('hidden');
+        }
+  
+
         //habilito todo lo de docente
         $("#docente").removeClass('hidden');
+        $("#cuadras").removeClass('hidden');
 
         //acá oculto todo lo de alumno
         $("#alumno").addClass('hidden');        
@@ -365,8 +386,8 @@
         
         $("#input_grado_anio_alumno").val("");
         $("#check_alumno_regular").prop("checked",false);
-        $("#input_cant_cuadras_alumno").val(""); 
-        $("#input_distancia_km_alumno").val("");
+        //$("#input_cant_cuadras").val(""); 
+        //$("#input_distancia_km").val("");
 
         //acá oculto todo lo de aux
         $("#aux").addClass('hidden');
@@ -379,8 +400,17 @@
         
       };
       if ($( "#relevamiento_rol option:selected" ).text() == "Auxiliar de educación"){
+
+      if ($("#check_activo_pasivo_aux").attr("checked") == "checked"){
+        $("#aux_activo").removeClass('hidden');
+      } else {
+        $("#aux_activo").addClass('hidden');
+      }
+
+
         //habilito todo lo de aux
-        $("#aux").removeClass('hidden');    
+        $("#aux").removeClass('hidden');
+        $("#cuadras").removeClass('hidden');    
         
         //acá oculto todo lo de alumno
         $("#alumno").addClass('hidden');        
@@ -388,16 +418,16 @@
         
         $("#input_grado_anio_alumno").val("");
         $("#check_alumno_regular").prop("checked",false);
-        $("#input_cant_cuadras_alumno").val(""); 
-        $("#input_distancia_km_alumno").val("");
+        //$("#input_cant_cuadras").val(""); 
+        //$("#input_distancia_km").val("");
 
         //acá oculto todo lo de docente
         $("#docente").addClass('hidden');
         $("#docente_activo").addClass('hidden');
         $("#frente_alumno").addClass('hidden');
 
-        $("#input_cant_cuadras_docente").val(""); 
-        $("#input_distancia_km_docente").val("");
+        $("#input_cant_cuadras").val(""); 
+        $("#input_distancia_km").val("");
         $("#check_activo_pasivo_docente").prop("checked",false);
         $("#check_frente_alumnos").prop("checked",false);
         $("#input_grado_docente").val("");
@@ -407,27 +437,28 @@
         //acá oculto todo lo de aux
         $("#aux").addClass('hidden');
         $("#aux_activo").addClass('hidden');
-        $("#input_cant_cuadras_aux").val(""); 
-        $("#input_distancia_km_aux").val("");
+        //$("#input_cant_cuadras_aux").val(""); 
+        //$("#input_distancia_km_aux").val("");
         $("#check_activo_pasivo_aux").prop("checked",false);
         $("#input_lugar_auxiliares").val("");
         
         //acá oculto todo lo de alumno
         $("#alumno").addClass('hidden');        
         $("#regular").addClass('hidden');
+        $("#cuadras").addClass('hidden');
         
         $("#input_grado_anio_alumno").val("");
         $("#check_alumno_regular").prop("checked",false);
-        $("#input_cant_cuadras_alumno").val(""); 
-        $("#input_distancia_km_alumno").val("");
+        //$("#input_cant_cuadras").val(""); 
+        //$("#input_distancia_km").val("");
 
         //acá oculto todo lo de docente
         $("#docente").addClass('hidden');
         $("#docente_activo").addClass('hidden');
         $("#frente_alumno").addClass('hidden');
 
-        $("#input_cant_cuadras_docente").val(""); 
-        $("#input_distancia_km_docente").val("");
+        $("#input_cant_cuadras").val(""); 
+        $("#input_distancia_km").val("");
         $("#check_activo_pasivo_docente").prop("checked",false);
         $("#check_frente_alumnos").prop("checked",false);
         $("#input_grado_docente").val("");
@@ -437,8 +468,10 @@
     $("#check_alumno_regular").click(function(){
       if ($(this).attr("checked") == "checked"){
         $("#regular").removeClass('hidden');
+        $("#cuadras").removeClass('hidden');
       } else {
         $("#regular").addClass('hidden');
+        $("#cuadras").addClass('hidden');
       }
     });
     $("#check_activo_pasivo_docente").click(function(){

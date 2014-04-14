@@ -1,125 +1,373 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Nombre y apellido:</b>
-  <%= @relevamiento.nombre_y_apellido %>
-</p>
+<style type="text/css">
+  .form-horizontal .control-label {
+      margin-left: -30px;
+  }
+  .form-horizontal .controls{
+      margin-right: 30px;
+  }
+  #documento_tipo_documento_id{
+    width: 150px;
+  }
+  h4,h6{
+    margin: 0px;
+    padding: 0px;
+  }
+  .controls {
+    padding-top: 5px;
+  }
+  </style>
 
-<p>
-  <b>Tipo de documento:</b>
-  <%= @relevamiento.tipo_de_documento_id %>
-</p>
+<form class="form-horizontal">
 
-<p>
-  <b>Nro documento:</b>
-  <%= @relevamiento.nro_documento %>
-</p>
-
-<p>
-  <b>Escuela:</b>
-  <%= @relevamiento.escuela_id %>
-</p>
-
-<p>
-  <b>Nivel:</b>
-  <%= @relevamiento.nivel_id %>
-</p>
-
-<p>
-  <b>Tipo gestion:</b>
-  <%= @relevamiento.tipo_gestion_id %>
-</p>
-
-<p>
-  <b>Localidad:</b>
-  <%= @relevamiento.localidad_id %>
-</p>
-
-<p>
-  <b>Calle:</b>
-  <%= @relevamiento.calle %>
-</p>
-
-<p>
-  <b>Nro:</b>
-  <%= @relevamiento.nro %>
-</p>
-
-<p>
-  <b>Piso:</b>
-  <%= @relevamiento.piso %>
-</p>
-
-<p>
-  <b>Depto:</b>
-  <%= @relevamiento.depto %>
-</p>
-
-<p>
-  <b>Grado anio alumno:</b>
-  <%= @relevamiento.grado_anio_alumno %>
-</p>
-
-<p>
-  <b>Regular:</b>
-  <%= @relevamiento.regular %>
-</p>
-
-<p>
-  <b>Cant cuadras:</b>
-  <%= @relevamiento.cant_cuadras %>
-</p>
-
-<p>
-  <b>Distancia km:</b>
-  <%= @relevamiento.distancia_km %>
-</p>
-
-<p>
-  <b>Servicio transporte:</b>
-  <%= @relevamiento.servicio_transporte %>
-</p>
-
-<p>
-  <b>Telefono contacto:</b>
-  <%= @relevamiento.telefono_contacto %>
-</p>
-
-<p>
-  <b>Rol:</b>
-  <%= @relevamiento.rol %>
-</p>
-
-<p>
-  <b>Activo pasivo docente:</b>
-  <%= @relevamiento.activo_pasivo_docente %>
-</p>
-
-<p>
-  <b>Frente alumnos:</b>
-  <%= @relevamiento.frente_alumnos %>
-</p>
-
-<p>
-  <b>Grado docente:</b>
-  <%= @relevamiento.grado_docente %>
-</p>
-
-<p>
-  <b>Turno docente:</b>
-  <%= @relevamiento.turno_docente %>
-</p>
-
-<p>
-  <b>Activo pasivo aux:</b>
-  <%= @relevamiento.activo_pasivo_aux %>
-</p>
-
-<p>
-  <b>Lugar auxiliares:</b>
-  <%= @relevamiento.lugar_auxiliares %>
-</p>
+  <div class="row">
+    <h4>Datos Personales</h4>
+  </div>
 
 
-<%= link_to 'Edit', edit_relevamiento_path(@relevamiento) %> |
-<%= link_to 'Back', relevamientos_path %>
+  <div class="row">
+    <div class="span12">
+      <div class="control-group success">
+        <label class="control-label"><strong>Nombres y apellidos:</strong></label>        
+          <%= @relevamiento.nombre_y_apellido %>        
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="span6">
+      <div class="control-group success">
+        <label class="control-label"><strong>Tipo de documento:</strong></label>
+        <div class="controls">
+          <%= @relevamiento.tipo_de_documento %>
+        </div>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="control-group success">
+        <label class="control-label"><strong>Número de documento:</strong></label>
+        <div class="controls">
+          <%= @relevamiento.nro_documento %>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="row">
+    <div class="span6">
+      <div class="control-group success">
+        <label class="control-label"><strong>Escuela:</strong></label>
+        <div class="controls">
+          <%= @relevamiento.escuela %>
+        </div>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="control-group success">
+        <label class="control-label"><strong>Nivel:</strong></label>
+        <div class="controls">
+          <%= @relevamiento.nivel %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span12">
+      <div class="control-group success">
+        <label class="control-label"><strong>Tipo de gestión:</strong></label>
+        <div class="controls">
+          <%= @relevamiento.tipo_gestion %>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="row">
+    <div class="span12">
+      <div class="control-group success">
+        <label class="control-label"><strong>Calle:</strong></label>
+        <div class="controls">
+          <%= @relevamiento.calle %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">    
+    <div class="span3">
+      <div class="control-group success">
+        <label class="control-label"><strong>Nro:</strong></label>
+        <div class="controls">
+          <%= @relevamiento.nro %>
+        </div>
+      </div>
+    </div>
+    <div class="span3">
+      <div class="control-group success">
+        <label class="control-label"><strong>Piso:</strong></label>
+        <div class="controls">
+          <%= @relevamiento.piso %>
+        </div>
+      </div>
+    </div>
+     <div class="span3">
+      <div class="control-group success">
+        <label class="control-label"><strong>Depto:</strong></label>
+        <div class="controls">
+          <%= @relevamiento.depto %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span12">
+      <div class="control-group success">
+        <label class="control-label"><strong>Localidad:</strong></label>
+        <div class="controls">
+          <%= @relevamiento.localidad %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span12">
+      <div class="control-group success">
+        <label class="control-label"><strong>Servicio de transporte público que utiliza:</strong></label>
+        <div class="controls">
+          <%= @relevamiento.servicio_transporte %>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+  <div class="row">
+    <div class="span12">
+      <div class="control-group success">
+        <label class="control-label"><strong>Teléfono de contacto:</strong></label>
+        <div class="controls">
+          <%= @relevamiento.telefono_contacto %>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+  <div class="row">
+    <h4>Condición</h4>
+  </div>
+
+  <hr/>
+
+  <div class="row">
+    <div class="span12">
+      <div class="control-group success">
+        <label class="control-label"><strong>Indique su condición:</strong></label>
+        <div class="controls">
+          <%= @relevamiento.rol %>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+  <hr/>
+
+  <% if @relevamiento.rol == "Alumno" %>
+
+    <div class="row">
+      <h4>Alumno</h4>
+      <hr/>
+    </div>
+
+    <div id="alumno">
+      <div class="row">
+        <div class="span12">
+          <div class="control-group success">
+            <label class="control-label"><strong>Grado/Año:</strong></label>
+            <div class="controls">
+              <%= @relevamiento.grado_anio_alumno %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span12">
+          <div class="control-group success">
+            <label class="control-label"><strong>Es regular:</strong></label>
+            <div class="controls">
+              <% if @relevamiento.regular == true %>
+                Si
+              <% else %>
+                No
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="regular">
+        <div class="row">
+          <div class="span6">
+            <div class="control-group success">
+              <label class="control-label"><strong>Cantidad de cuadras a la escuela:</strong></label>
+              <div class="controls">
+                <%= @relevamiento.cant_cuadras %>
+              </div>
+            </div>
+          </div>
+          <div class="span6">
+            <div class="control-group success">
+              <label class="control-label"><strong>Cantidad de kilómetros a la escuela:</strong></label>
+              <div class="controls">
+                <%= @relevamiento.distancia_km %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+
+  <% if @relevamiento.rol == "Docente" %>
+
+    <div class="row">
+      <h4>Docente</h4>
+      <hr/>
+    </div>
+
+    <div id="docente">
+      <div class="row">
+        <div class="span6">
+          <div class="control-group success">
+            <label class="control-label"><strong>Cantidad de cuadras a la escuela:</strong></label>
+            <div class="controls">
+              <%= @relevamiento.cant_cuadras %>
+            </div>
+          </div>
+        </div>
+        <div class="span6">
+          <div class="control-group success">
+            <label class="control-label"><strong>Cantidad de kilómetros a la escuela:</strong></label>
+            <div class="controls">
+              <%= @relevamiento.distancia_km %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <div class="control-group success">
+            <label class="control-label"><strong>Es docente activo:</strong></label>
+            <div class="controls">
+              <% if @relevamiento.activo_pasivo_docente == true %>
+                Si
+              <% else %>
+                No
+              <% end %>
+            </div>
+          </div>
+        </div>    
+      </div>
+      <div id="docente_activo">
+        <div class="row">
+          <div class="span12">
+            <div class="control-group success">
+              <label class="control-label"><strong>Cumple su función frente a grupo de alumnos:</strong></label>
+              <div class="controls">
+                <% if @relevamiento.frente_alumnos == true %>
+                  Si
+                <% else %>
+                  No
+                <% end %>
+              </div>
+            </div>
+          </div>    
+        </div>
+        <div id="frente_alumno">
+          <div class="row">
+            <div class="span6">
+              <div class="control-group success">
+                <label class="control-label"><strong>Grado:</strong></label>
+                <div class="controls">
+                  <%= @relevamiento.grado_docente %>
+                </div>
+              </div>
+            </div>
+            <div class="span6">
+              <div class="control-group success">
+                <label class="control-label"><strong>Turno:</strong></label>
+                <div class="controls">
+                  <%= @relevamiento.turno_docente %>
+                </div>
+              </div>
+            </div>     
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+
+  <% if @relevamiento.rol == "Auxiliar de educación" %>
+
+    <div class="row">
+      <h4>Auxiliar de educación</h4>
+      <hr/>
+    </div>
+
+    <div id="aux">
+      <div class="row">
+        <div class="span6">
+          <div class="control-group success">
+            <label class="control-label"><strong>Cantidad de cuadras a la escuela:</strong></label>
+            <div class="controls">
+              <%= @relevamiento.cant_cuadras %>
+            </div>
+          </div>
+        </div>
+        <div class="span6">
+          <div class="control-group success">
+            <label class="control-label"><strong>Cantidad de kilómetros a la escuela:</strong></label>
+            <div class="controls">
+              <%= @relevamiento.distancia_km %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <div class="control-group success">
+            <label class="control-label"><strong>Es auxiliar activo:</strong></label>
+            <div class="controls">
+              <% if @relevamiento.activo_pasivo_aux == true %>
+                Si
+              <% else %>
+                No
+              <% end %>
+            </div>
+          </div>
+        </div>    
+      </div>
+      <div id="aux_activo">
+        <div class="row">
+          <div class="span12">
+            <div class="control-group success">
+              <label class="control-label"><strong>Lugar donde cumple su función:</strong></label>
+              <div class="controls">
+                <%= @relevamiento.lugar_auxiliares %>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+
+</form>
+
+<%= link_to 'Editar', edit_relevamiento_path(@relevamiento), :class => "btn btn-primary" %> 
+<%= link_to 'Nuevo', new_relevamiento_path, :class => "btn btn-success" %>

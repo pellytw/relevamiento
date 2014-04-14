@@ -82,6 +82,6 @@ Mysecurity::Application.routes.draw do
   #
   #
 
-  root :to => "relevamiento#new"
+  root :to => "relevamientos#new"
   end
 end
