@@ -1,24 +1,24 @@
 Mysecurity::Application.routes.draw do
-  resources :escuelas
+  #resources :escuelas
 
   resources :relevamientos
 
-  resources :regiones
+  #resources :regiones
 
-  resources :localidades
+  #resources :localidades
 
-  resources :tipo_gestiones
+  #resources :tipo_gestiones
 
-  resources :niveles
+  #resources :niveles
 
-  resources :tipo_de_documentos
+  #resources :tipo_de_documentos
 
-  resources :role_permissions
+  #resources :role_permissions
 
     devise_for :users, :path => 'user'
 
-    resources :roles
-    resources :users
+    #resources :roles
+    #resources :users
   
 
   # The priority is based upon order of creation:
