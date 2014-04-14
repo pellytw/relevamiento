@@ -1,0 +1,471 @@
+<%= form_for(@relevamiento, :html => { :class => "form-horizontal"}) do |f| %>
+  <% if @relevamiento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@relevamiento.errors.count, "error") %> prohibited this relevamiento from being saved:</h2>
+
+      <ul>
+      <% @relevamiento.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% @tipo_roles = ["Alumno","Docente","Auxiliar de educación"] %>
+
+  <div class="row">
+    <div class="span12">
+      <div class="control-group success">
+        <label class="control-label"><strong>Nombres y apellidos:</strong></label>
+        <div class="controls">
+          <%= f.text_field :nombre_y_apellido, :style => "width:100%;" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="span6">
+      <div class="control-group success">
+        <label class="control-label"><strong>Tipo de documento:</strong></label>
+        <div class="controls">
+          <%= f.collection_select(:tipo_de_documento_id, TipoDeDocumento.all, :id, :nombre) %>
+        </div>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="control-group success">
+        <label class="control-label"><strong>Número de documento:</strong></label>
+        <div class="controls">
+          <%= f.number_field :nro_documento %>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="row">
+    <div class="span6">
+      <div class="control-group success">
+        <label class="control-label"><strong>Escuela:</strong></label>
+        <div class="controls">
+          <%= f.collection_select(:escuela_id, Escuela.all, :id, :to_s) %>
+        </div>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="control-group success">
+        <label class="control-label"><strong>Nivel:</strong></label>
+        <div class="controls">
+          <%= f.collection_select(:nivel_id, Nivel.all, :id, :nombre) %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span12">
+      <div class="control-group success">
+        <label class="control-label"><strong>Tipo de gestión:</strong></label>
+        <div class="controls">
+          <%= f.collection_select(:tipo_gestion_id, TipoGestion.all, :id, :nombre) %>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="row">
+    <div class="span12">
+      <div class="control-group success">
+        <label class="control-label"><strong>Calle:</strong></label>
+        <div class="controls">
+          <%= f.text_field :calle, :style => "width:100%;" %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">    
+    <div class="span3">
+      <div class="control-group success">
+        <label class="control-label"><strong>Nro:</strong></label>
+        <div class="controls">
+          <%= f.text_field :nro %>
+        </div>
+      </div>
+    </div>
+    <div class="span3">
+      <div class="control-group success">
+        <label class="control-label"><strong>Piso:</strong></label>
+        <div class="controls">
+          <%= f.text_field :piso %>
+        </div>
+      </div>
+    </div>
+     <div class="span3">
+      <div class="control-group success">
+        <label class="control-label"><strong>Depto:</strong></label>
+        <div class="controls">
+          <%= f.text_field :depto %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span12">
+      <div class="control-group success">
+        <label class="control-label"><strong>Localidad:</strong></label>
+        <div class="controls">
+          <%= f.collection_select(:localidad_id, Localidad.all, :id, :nombre) %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span12">
+      <div class="control-group success">
+        <label class="control-label"><strong>Servicio de transporte público que utiliza:</strong></label>
+        <div class="controls">
+          <%= f.text_field :servicio_transporte, :style => "width:100%;" %>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+  <div class="row">
+    <div class="span12">
+      <div class="control-group success">
+        <label class="control-label"><strong>Teléfono de contacto:</strong></label>
+        <div class="controls">
+          <%= f.text_field :telefono_contacto %>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+  <hr/>
+
+  <div class="row">
+    <div class="span12">
+      <div class="control-group success">
+        <label class="control-label"><strong>Indique su condición:</strong></label>
+        <div class="controls">
+          <select name="tipo_roles" id="relevamiento_rol">
+          <option selected="selected" value="1">Seleccione una función</option>
+            <% @tipo_roles.each do |tp| %>
+              <option value="<%=tp%>"><%=tp%></option>
+            <% end %>
+          </select>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+  <hr/>
+
+  <div id="alumno">
+    <div class="row">
+      <div class="span12">
+        <div class="control-group success">
+          <label class="control-label"><strong>Grado/Año:</strong></label>
+          <div class="controls">
+            <%= f.number_field :grado_anio_alumno, :id => "input_grado_anio_alumno" %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        <div class="control-group success">
+          <label class="control-label"><strong>Marque si es alumno regular:</strong></label>
+          <div class="controls">
+             <%= f.check_box :regular, :id => "check_alumno_regular" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="regular">
+      <div class="row">
+        <div class="span6">
+          <div class="control-group success">
+            <label class="control-label"><strong>Cantidad de cuadras a la escuela:</strong></label>
+            <div class="controls">
+              <%= f.number_field :cant_cuadras, :class => "input_alumno", :id => "input_cant_cuadras_alumno" %>
+            </div>
+          </div>
+        </div>
+        <div class="span6">
+          <div class="control-group success">
+            <label class="control-label"><strong>Cantidad de kilómetros a la escuela:</strong></label>
+            <div class="controls">
+              <%= f.text_field :distancia_km, :id => "input_distancia_km_alumno" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="docente">
+    <div class="row">
+      <div class="span6">
+        <div class="control-group success">
+          <label class="control-label"><strong>Cantidad de cuadras a la escuela:</strong></label>
+          <div class="controls">
+            <%= f.number_field :cant_cuadras, :id => "input_cant_cuadras_docente" %>
+          </div>
+        </div>
+      </div>
+      <div class="span6">
+        <div class="control-group success">
+          <label class="control-label"><strong>Cantidad de kilómetros a la escuela:</strong></label>
+          <div class="controls">
+            <%= f.text_field :distancia_km, :id => "input_distancia_km_docente" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span12">
+        <div class="control-group success">
+          <label class="control-label"><strong>Marque si es docente activo:</strong></label>
+          <div class="controls">
+            <%= f.check_box :activo_pasivo_docente, :id => "check_activo_pasivo_docente" %>
+          </div>
+        </div>
+      </div>    
+    </div>
+    <div id="docente_activo">
+      <div class="row">
+        <div class="span12">
+          <div class="control-group success">
+            <label class="control-label"><strong>Marque si cumple su función frente a grupo de alumnos:</strong></label>
+            <div class="controls">
+              <%= f.check_box :frente_alumnos, :id => "check_frente_alumnos" %>
+            </div>
+          </div>
+        </div>    
+      </div>
+      <div id="frente_alumno">
+        <div class="row">
+          <div class="span6">
+            <div class="control-group success">
+              <label class="control-label"><strong>Grado:</strong></label>
+              <div class="controls">
+                <%= f.text_field :grado_docente, :id => "input_grado_docente" %>
+              </div>
+            </div>
+          </div>
+          <div class="span6">
+            <div class="control-group success">
+              <label class="control-label"><strong>Turno:</strong></label>
+              <div class="controls">
+                <%= f.text_field :turno_docente, :id => "input_turno_docente" %>
+              </div>
+            </div>
+          </div>     
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="aux">
+    <div class="row">
+      <div class="span6">
+        <div class="control-group success">
+          <label class="control-label"><strong>Cantidad de cuadras a la escuela:</strong></label>
+          <div class="controls">
+            <%= f.number_field :cant_cuadras, :id => "input_cant_cuadras_aux" %>
+          </div>
+        </div>
+      </div>
+      <div class="span6">
+        <div class="control-group success">
+          <label class="control-label"><strong>Cantidad de kilómetros a la escuela:</strong></label>
+          <div class="controls">
+            <%= f.text_field :distancia_km, :id => "input_distancia_km_aux" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span12">
+        <div class="control-group success">
+          <label class="control-label"><strong>Marque si es auxiliar activo:</strong></label>
+          <div class="controls">
+            <%= f.check_box :activo_pasivo_aux, :id => "check_activo_pasivo_aux" %>
+          </div>
+        </div>
+      </div>    
+    </div>
+    <div id="aux_activo">
+      <div class="row">
+        <div class="span12">
+          <div class="control-group success">
+            <label class="control-label"><strong>Lugar donde cumple su función:</strong></label>
+            <div class="controls">
+              <%= f.text_field :lugar_auxiliares, :id => "input_lugar_auxiliares" %>
+            </div>
+          </div>
+        </div>    
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  $( document ).ready(function() {
+    $("#alumno").addClass('hidden');
+    $("#docente").addClass('hidden');
+    $("#aux").addClass('hidden');
+    $("#regular").addClass('hidden');
+    $("#docente_activo").addClass('hidden');
+    $("#aux_activo").addClass('hidden');
+    $("#frente_alumno").addClass('hidden');
+
+    $( "#relevamiento_rol" ).change(function() {
+      if ($( "#relevamiento_rol option:selected" ).text() == "Alumno"){
+        //habilito todo lo de alumno
+        $("#alumno").removeClass('hidden');
+
+        //acá oculto todo lo de aux
+        $("#aux").addClass('hidden');
+        $("#aux_activo").addClass('hidden');
+        $("#input_cant_cuadras_aux").val(""); 
+        $("#input_distancia_km_aux").val("");
+        $("#check_activo_pasivo_aux").prop("checked",false);
+        $("#input_lugar_auxiliares").val("");
+
+        //acá oculto todo lo de docente
+        $("#docente").addClass('hidden');
+        $("#docente_activo").addClass('hidden');
+        $("#frente_alumno").addClass('hidden');
+
+        $("#input_cant_cuadras_docente").val(""); 
+        $("#input_distancia_km_docente").val("");
+        $("#check_activo_pasivo_docente").prop("checked",false);
+        $("#check_frente_alumnos").prop("checked",false);
+        $("#input_grado_docente").val("");
+        $("#input_turno_docente").val("");
+
+      };
+      if ($( "#relevamiento_rol option:selected" ).text() == "Docente"){
+        //habilito todo lo de docente
+        $("#docente").removeClass('hidden');
+
+        //acá oculto todo lo de alumno
+        $("#alumno").addClass('hidden');        
+        $("#regular").addClass('hidden');
+        
+        $("#input_grado_anio_alumno").val("");
+        $("#check_alumno_regular").prop("checked",false);
+        $("#input_cant_cuadras_alumno").val(""); 
+        $("#input_distancia_km_alumno").val("");
+
+        //acá oculto todo lo de aux
+        $("#aux").addClass('hidden');
+        $("#aux_activo").addClass('hidden');
+        $("#input_cant_cuadras_aux").val(""); 
+        $("#input_distancia_km_aux").val("");
+        $("#check_activo_pasivo_aux").prop("checked",false);
+        $("#input_lugar_auxiliares").val("");
+               
+        
+      };
+      if ($( "#relevamiento_rol option:selected" ).text() == "Auxiliar de educación"){
+        //habilito todo lo de aux
+        $("#aux").removeClass('hidden');    
+        
+        //acá oculto todo lo de alumno
+        $("#alumno").addClass('hidden');        
+        $("#regular").addClass('hidden');
+        
+        $("#input_grado_anio_alumno").val("");
+        $("#check_alumno_regular").prop("checked",false);
+        $("#input_cant_cuadras_alumno").val(""); 
+        $("#input_distancia_km_alumno").val("");
+
+        //acá oculto todo lo de docente
+        $("#docente").addClass('hidden');
+        $("#docente_activo").addClass('hidden');
+        $("#frente_alumno").addClass('hidden');
+
+        $("#input_cant_cuadras_docente").val(""); 
+        $("#input_distancia_km_docente").val("");
+        $("#check_activo_pasivo_docente").prop("checked",false);
+        $("#check_frente_alumnos").prop("checked",false);
+        $("#input_grado_docente").val("");
+        $("#input_turno_docente").val("");
+      };
+      if ($( "#relevamiento_rol option:selected" ).text() == "Seleccione una función"){
+        //acá oculto todo lo de aux
+        $("#aux").addClass('hidden');
+        $("#aux_activo").addClass('hidden');
+        $("#input_cant_cuadras_aux").val(""); 
+        $("#input_distancia_km_aux").val("");
+        $("#check_activo_pasivo_aux").prop("checked",false);
+        $("#input_lugar_auxiliares").val("");
+        
+        //acá oculto todo lo de alumno
+        $("#alumno").addClass('hidden');        
+        $("#regular").addClass('hidden');
+        
+        $("#input_grado_anio_alumno").val("");
+        $("#check_alumno_regular").prop("checked",false);
+        $("#input_cant_cuadras_alumno").val(""); 
+        $("#input_distancia_km_alumno").val("");
+
+        //acá oculto todo lo de docente
+        $("#docente").addClass('hidden');
+        $("#docente_activo").addClass('hidden');
+        $("#frente_alumno").addClass('hidden');
+
+        $("#input_cant_cuadras_docente").val(""); 
+        $("#input_distancia_km_docente").val("");
+        $("#check_activo_pasivo_docente").prop("checked",false);
+        $("#check_frente_alumnos").prop("checked",false);
+        $("#input_grado_docente").val("");
+        $("#input_turno_docente").val("");
+      };
+    });
+    $("#check_alumno_regular").click(function(){
+      if ($(this).attr("checked") == "checked"){
+        $("#regular").removeClass('hidden');
+      } else {
+        $("#regular").addClass('hidden');
+      }
+    });
+    $("#check_activo_pasivo_docente").click(function(){
+      if ($(this).attr("checked") == "checked"){
+        $("#docente_activo").removeClass('hidden');
+      } else {
+        $("#docente_activo").addClass('hidden');
+      }
+    });
+    $("#check_frente_alumnos").click(function(){
+      if ($(this).attr("checked") == "checked"){
+        $("#frente_alumno").removeClass('hidden');
+      } else {
+        $("#frente_alumno").addClass('hidden');
+      }
+    });
+    $("#check_activo_pasivo_aux").click(function(){
+      if ($(this).attr("checked") == "checked"){
+        $("#aux_activo").removeClass('hidden');
+      } else {
+        $("#aux_activo").addClass('hidden');
+      }
+    });
+
+    
+
+    //$("#alumno").addClass('hidden');
+
+  });
+</script>

@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nombre_y_apellido: MyString
+  tipo_de_documento_id: 1
+  nro_documento: 1
+  escuela_id: 1
+  nivel_id: 1
+  tipo_gestion_id: 1
+  localidad_id: 1
+  calle: MyString
+  nro: 1
+  piso: MyString
+  depto: MyString
+  grado_anio_alumno: 1
+  regular: false
+  cant_cuadras: 1
+  distancia_km: 1.5
+  servicio_transporte: MyString
+  telefono_contacto: MyString
+  rol: MyString
+  activo_pasivo_docente: false
+  frente_alumnos: false
+  grado_docente: MyString
+  turno_docente: MyString
+  activo_pasivo_aux: false
+  lugar_auxiliares: MyString
+
+two:
+  nombre_y_apellido: MyString
+  tipo_de_documento_id: 1
+  nro_documento: 1
+  escuela_id: 1
+  nivel_id: 1
+  tipo_gestion_id: 1
+  localidad_id: 1
+  calle: MyString
+  nro: 1
+  piso: MyString
+  depto: MyString
+  grado_anio_alumno: 1
+  regular: false
+  cant_cuadras: 1
+  distancia_km: 1.5
+  servicio_transporte: MyString
+  telefono_contacto: MyString
+  rol: MyString
+  activo_pasivo_docente: false
+  frente_alumnos: false
+  grado_docente: MyString
+  turno_docente: MyString
+  activo_pasivo_aux: false
+  lugar_auxiliares: MyString

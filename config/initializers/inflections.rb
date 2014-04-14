@@ -8,3 +8,19 @@
 #   inflect.irregular 'person', 'people'
 #   inflect.uncountable %w( fish sheep )
 # end
+
+ActiveSupport::Inflector.inflections do |inflect|
+  inflect.plural /^(ox)$/i, '\1en'
+  inflect.singular /^(ox)en/i, '\1'
+  inflect.irregular 'person', 'people'
+
+  inflect.irregular 'localidad', 'localidades'
+  inflect.irregular 'relevamiento', 'relevamientos'
+  inflect.irregular 'tipo_de_documento', 'tipo_de_documentos'
+  inflect.irregular 'escuela', 'escuelas'
+  inflect.irregular 'tipo_gestion', 'tipo_gestiones'
+  inflect.irregular 'region', 'regiones'
+  inflect.irregular 'nivel', 'niveles'
+
+  inflect.uncountable %w( fish sheep )
+end

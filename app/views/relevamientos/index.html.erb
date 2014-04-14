@@ -1,0 +1,69 @@
+<h1>Listing relevamientos</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>Nombre y apellido</th>
+    <th>Tipo de documento</th>
+    <th>Nro documento</th>
+    <th>Escuela</th>
+    <th>Nivel</th>
+    <th>Tipo gestion</th>
+    <th>Localidad</th>
+    <th>Calle</th>
+    <th>Nro</th>
+    <th>Piso</th>
+    <th>Depto</th>
+    <th>Grado anio alumno</th>
+    <th>Regular</th>
+    <th>Cant cuadras</th>
+    <th>Distancia km</th>
+    <th>Servicio transporte</th>
+    <th>Telefono contacto</th>
+    <th>Rol</th>
+    <th>Activo pasivo docente</th>
+    <th>Frente alumnos</th>
+    <th>Grado docente</th>
+    <th>Turno docente</th>
+    <th>Activo pasivo aux</th>
+    <th>Lugar auxiliares</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @relevamientos.each do |relevamiento| %>
+  <tr>
+    <td><%= relevamiento.nombre_y_apellido %></td>
+    <td><%= relevamiento.tipo_de_documento_id %></td>
+    <td><%= relevamiento.nro_documento %></td>
+    <td><%= relevamiento.escuela_id %></td>
+    <td><%= relevamiento.nivel_id %></td>
+    <td><%= relevamiento.tipo_gestion_id %></td>
+    <td><%= relevamiento.localidad_id %></td>
+    <td><%= relevamiento.calle %></td>
+    <td><%= relevamiento.nro %></td>
+    <td><%= relevamiento.piso %></td>
+    <td><%= relevamiento.depto %></td>
+    <td><%= relevamiento.grado_anio_alumno %></td>
+    <td><%= relevamiento.regular %></td>
+    <td><%= relevamiento.cant_cuadras %></td>
+    <td><%= relevamiento.distancia_km %></td>
+    <td><%= relevamiento.servicio_transporte %></td>
+    <td><%= relevamiento.telefono_contacto %></td>
+    <td><%= relevamiento.rol %></td>
+    <td><%= relevamiento.activo_pasivo_docente %></td>
+    <td><%= relevamiento.frente_alumnos %></td>
+    <td><%= relevamiento.grado_docente %></td>
+    <td><%= relevamiento.turno_docente %></td>
+    <td><%= relevamiento.activo_pasivo_aux %></td>
+    <td><%= relevamiento.lugar_auxiliares %></td>
+    <td><%= link_to 'Show', relevamiento %></td>
+    <td><%= link_to 'Edit', edit_relevamiento_path(relevamiento) %></td>
+    <td><%= link_to 'Destroy', relevamiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Relevamiento', new_relevamiento_path %>
