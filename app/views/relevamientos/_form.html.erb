@@ -1,7 +1,7 @@
 <%= form_for(@relevamiento, :html => { :class => "form-horizontal"}) do |f| %>
   <% if @relevamiento.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@relevamiento.errors.count, "error") %> prohibited this relevamiento from being saved:</h2>
+    <div id="error_explanation" class = "alert alert-error" >
+      <h2>No se pudo guardar el relevamiento, tiene los siguientes errores:</h2>
 
       <ul>
       <% @relevamiento.errors.full_messages.each do |msg| %>

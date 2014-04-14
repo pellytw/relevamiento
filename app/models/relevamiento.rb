@@ -7,4 +7,7 @@ class Relevamiento < ActiveRecord::Base
   belongs_to :tipo_gestion
   belongs_to :localidad
 
+  validates :nombre_y_apellido, :presence => true
+  validates :nro_documento, :presence => true, uniqueness: true
+
 end
