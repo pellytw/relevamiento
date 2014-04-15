@@ -1,0 +1,619 @@
+I, [2014-04-14T15:17:28.962551 #10716]  INFO -- : Refreshing Gem list
+/home/ubuntu/webapps/relevamiento/config/initializers/devise.rb:224:in `block in <top (required)>': undefined method `secret_key=' for Devise:Module (NoMethodError)
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/devise-2.1.2/lib/devise.rb:247:in `setup'
+	from /home/ubuntu/webapps/relevamiento/config/initializers/devise.rb:3:in `<top (required)>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `load'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `block in load'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:236:in `load_dependency'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `load'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/engine.rb:588:in `block (2 levels) in <class:Engine>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/engine.rb:587:in `each'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/engine.rb:587:in `block in <class:Engine>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `instance_exec'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `run'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:55:in `block in run_initializers'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `each'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `run_initializers'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/application.rb:136:in `initialize!'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/railtie/configurable.rb:30:in `method_missing'
+	from /home/ubuntu/webapps/relevamiento/config/environment.rb:5:in `<top (required)>'
+	from config.ru:4:in `require'
+	from config.ru:4:in `block in <main>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/builder.rb:51:in `instance_eval'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/builder.rb:51:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn.rb:44:in `eval'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn.rb:44:in `block in builder'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:722:in `call'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:722:in `build_app!'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:140:in `start'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/bin/unicorn:23:in `load'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/bin/unicorn:23:in `<main>'
+I, [2014-04-14T15:18:26.363741 #10767]  INFO -- : Refreshing Gem list
+/home/ubuntu/webapps/relevamiento/config/initializers/devise.rb:224:in `block in <top (required)>': undefined method `secret_key=' for Devise:Module (NoMethodError)
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/devise-2.1.2/lib/devise.rb:247:in `setup'
+	from /home/ubuntu/webapps/relevamiento/config/initializers/devise.rb:3:in `<top (required)>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `load'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `block in load'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:236:in `load_dependency'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `load'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/engine.rb:588:in `block (2 levels) in <class:Engine>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/engine.rb:587:in `each'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/engine.rb:587:in `block in <class:Engine>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `instance_exec'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `run'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:55:in `block in run_initializers'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `each'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `run_initializers'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/application.rb:136:in `initialize!'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/railtie/configurable.rb:30:in `method_missing'
+	from /home/ubuntu/webapps/relevamiento/config/environment.rb:5:in `<top (required)>'
+	from config.ru:4:in `require'
+	from config.ru:4:in `block in <main>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/builder.rb:51:in `instance_eval'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/builder.rb:51:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn.rb:44:in `eval'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn.rb:44:in `block in builder'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:722:in `call'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:722:in `build_app!'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:140:in `start'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/bin/unicorn:23:in `load'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/bin/unicorn:23:in `<main>'
+I, [2014-04-14T15:19:54.568476 #10834]  INFO -- : Refreshing Gem list
+/home/ubuntu/webapps/relevamiento/app/controllers/role_permissions_controller.rb:104:in `private': undefined method `prepare' for class `RolePermissionsController' (NameError)
+	from /home/ubuntu/webapps/relevamiento/app/controllers/role_permissions_controller.rb:104:in `<class:RolePermissionsController>'
+	from /home/ubuntu/webapps/relevamiento/app/controllers/role_permissions_controller.rb:1:in `<top (required)>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `require'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `block in require'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:236:in `load_dependency'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `require'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:359:in `require_or_load'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:313:in `depend_on'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:225:in `require_dependency'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/engine.rb:439:in `block (2 levels) in eager_load!'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/engine.rb:438:in `each'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/engine.rb:438:in `block in eager_load!'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/engine.rb:436:in `each'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/engine.rb:436:in `eager_load!'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/application/finisher.rb:53:in `block in <module:Finisher>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `instance_exec'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `run'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:55:in `block in run_initializers'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `each'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `run_initializers'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/application.rb:136:in `initialize!'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/railtie/configurable.rb:30:in `method_missing'
+	from /home/ubuntu/webapps/relevamiento/config/environment.rb:5:in `<top (required)>'
+	from config.ru:4:in `require'
+	from config.ru:4:in `block in <main>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/builder.rb:51:in `instance_eval'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/builder.rb:51:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn.rb:44:in `eval'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn.rb:44:in `block in builder'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:722:in `call'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:722:in `build_app!'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:140:in `start'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/bin/unicorn:23:in `load'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/bin/unicorn:23:in `<main>'
+I, [2014-04-14T15:24:03.484380 #11061]  INFO -- : Refreshing Gem list
+/home/ubuntu/webapps/relevamiento/app/controllers/role_permissions_controller.rb:104:in `private': undefined method `prepare' for class `RolePermissionsController' (NameError)
+	from /home/ubuntu/webapps/relevamiento/app/controllers/role_permissions_controller.rb:104:in `<class:RolePermissionsController>'
+	from /home/ubuntu/webapps/relevamiento/app/controllers/role_permissions_controller.rb:1:in `<top (required)>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `require'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `block in require'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:236:in `load_dependency'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `require'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:359:in `require_or_load'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:313:in `depend_on'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:225:in `require_dependency'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/engine.rb:439:in `block (2 levels) in eager_load!'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/engine.rb:438:in `each'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/engine.rb:438:in `block in eager_load!'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/engine.rb:436:in `each'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/engine.rb:436:in `eager_load!'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/application/finisher.rb:53:in `block in <module:Finisher>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `instance_exec'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `run'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:55:in `block in run_initializers'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `each'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `run_initializers'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/application.rb:136:in `initialize!'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.8/lib/rails/railtie/configurable.rb:30:in `method_missing'
+	from /home/ubuntu/webapps/relevamiento/config/environment.rb:5:in `<top (required)>'
+	from config.ru:4:in `require'
+	from config.ru:4:in `block in <main>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/builder.rb:51:in `instance_eval'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/builder.rb:51:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn.rb:44:in `eval'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn.rb:44:in `block in builder'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:722:in `call'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:722:in `build_app!'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/lib/unicorn/http_server.rb:140:in `start'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.6.2/bin/unicorn:126:in `<top (required)>'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/bin/unicorn:23:in `load'
+	from /home/ubuntu/.rvm/gems/ruby-1.9.3-p286/bin/unicorn:23:in `<main>'
+I, [2014-04-14T15:26:26.348865 #11136]  INFO -- : Refreshing Gem list
+I, [2014-04-14T15:26:30.501987 #11136]  INFO -- : listening on addr=/tmp/unicorn.relevamiento.sock fd=11
+I, [2014-04-14T15:26:30.509664 #11136]  INFO -- : master process ready
+I, [2014-04-14T15:26:30.585373 #11150]  INFO -- : worker=3 ready
+I, [2014-04-14T15:26:30.585384 #11147]  INFO -- : worker=2 ready
+I, [2014-04-14T15:26:30.585435 #11141]  INFO -- : worker=0 ready
+I, [2014-04-14T15:26:30.585622 #11144]  INFO -- : worker=1 ready
+I, [2014-04-14T15:27:35.235104 #11136]  INFO -- : reaped #<Process::Status: pid 11141 exit 0> worker=0
+I, [2014-04-14T15:27:35.235261 #11136]  INFO -- : reaped #<Process::Status: pid 11144 exit 0> worker=1
+I, [2014-04-14T15:27:35.235327 #11136]  INFO -- : reaped #<Process::Status: pid 11147 exit 0> worker=2
+I, [2014-04-14T15:27:35.235392 #11136]  INFO -- : reaped #<Process::Status: pid 11150 exit 0> worker=3
+I, [2014-04-14T15:27:35.235523 #11136]  INFO -- : master complete
+I, [2014-04-14T15:27:52.076780 #11222]  INFO -- : Refreshing Gem list
+I, [2014-04-14T15:27:55.960585 #11222]  INFO -- : unlinking existing socket=/tmp/unicorn.relevamiento.sock
+I, [2014-04-14T15:27:55.960850 #11222]  INFO -- : listening on addr=/tmp/unicorn.relevamiento.sock fd=11
+I, [2014-04-14T15:27:55.967501 #11222]  INFO -- : master process ready
+I, [2014-04-14T15:27:56.016362 #11230]  INFO -- : worker=1 ready
+I, [2014-04-14T15:27:56.029754 #11227]  INFO -- : worker=0 ready
+I, [2014-04-14T15:27:56.033358 #11236]  INFO -- : worker=3 ready
+I, [2014-04-14T15:27:56.033356 #11233]  INFO -- : worker=2 ready
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /soft/relevamiento/relevamientos/new HTTP/1.0" 200 - 0.7555
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /application.css?body=1 HTTP/1.0" 200 318 0.0107
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /tables.css?body=1 HTTP/1.0" 200 879 0.0081
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /jquery_ujs.js?body=1 HTTP/1.0" 200 17894 0.0094
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 200 1758 0.0106
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 200 2371 0.0109
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 200 6425 0.0109
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 200 3965 0.0109
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /relevamientos.css?body=1 HTTP/1.0" 200 - 0.0945
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 200 256553 0.1065
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 200 3353 0.0105
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 200 7758 0.0113
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 200 2995 0.0099
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 200 2683 0.0095
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 200 4403 0.0518
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 200 4463 0.0096
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 200 5210 0.0106
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 200 7788 0.0102
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 200 3330 0.0095
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /jquery.js?body=1 HTTP/1.0" 200 252882 0.1289
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /allPages.js?body=1 HTTP/1.0" 200 997 0.0074
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /relevamientos.js?body=1 HTTP/1.0" 200 32 0.0093
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 200 13 0.0236
+172.16.24.78 - - [14/Apr/2014 15:27:57] "GET /application.js?body=1 HTTP/1.0" 200 408 0.0281
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /soft/relevamiento/relevamientos/new HTTP/1.0" 304 - 0.3757
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 304 - 0.0062
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /relevamientos.css?body=1 HTTP/1.0" 304 - 0.0079
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /tables.css?body=1 HTTP/1.0" 304 - 0.0078
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /jquery_ujs.js?body=1 HTTP/1.0" 304 - 0.0089
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /jquery.js?body=1 HTTP/1.0" 304 - 0.0083
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 304 - 0.0097
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 304 - 0.0057
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 304 - 0.0113
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 304 - 0.0097
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 304 - 0.0060
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 304 - 0.0104
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 304 - 0.0099
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 304 - 0.0096
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 304 - 0.0061
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 304 - 0.0099
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 304 - 0.0096
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /application.css?body=1 HTTP/1.0" 304 - 0.0505
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 304 - 0.0103
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 304 - 0.0099
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 304 - 0.0077
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /allPages.js?body=1 HTTP/1.0" 304 - 0.0079
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /relevamientos.js?body=1 HTTP/1.0" 304 - 0.0059
+172.16.24.78 - - [14/Apr/2014 15:28:02] "GET /application.js?body=1 HTTP/1.0" 304 - 0.0784
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /soft/relevamiento/relevamientos/new HTTP/1.0" 304 - 0.3643
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /relevamientos.css?body=1 HTTP/1.0" 304 - 0.0079
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /tables.css?body=1 HTTP/1.0" 304 - 0.0080
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 304 - 0.0082
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /application.css?body=1 HTTP/1.0" 304 - 0.0106
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 304 - 0.0057
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /jquery_ujs.js?body=1 HTTP/1.0" 304 - 0.0085
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /jquery.js?body=1 HTTP/1.0" 304 - 0.0086
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 304 - 0.0064
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 304 - 0.0060
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 304 - 0.0057
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 304 - 0.0096
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 304 - 0.0093
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 304 - 0.0116
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 304 - 0.0096
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 304 - 0.0055
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 304 - 0.0096
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 304 - 0.0061
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /allPages.js?body=1 HTTP/1.0" 304 - 0.0069
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 304 - 0.0117
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /application.js?body=1 HTTP/1.0" 304 - 0.0088
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /relevamientos.js?body=1 HTTP/1.0" 304 - 0.0069
+172.16.24.78 - - [14/Apr/2014 15:28:05] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 304 - 0.0227
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /soft/relevamiento/relevamientos/new HTTP/1.0" 304 - 0.0748
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 304 - 0.0063
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /application.css?body=1 HTTP/1.0" 304 - 0.0066
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /tables.css?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /jquery.js?body=1 HTTP/1.0" 304 - 0.0067
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /jquery_ujs.js?body=1 HTTP/1.0" 304 - 0.0091
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 304 - 0.0103
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 304 - 0.0105
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 304 - 0.0094
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 304 - 0.0063
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 304 - 0.0104
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 304 - 0.0100
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 304 - 0.0110
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 304 - 0.0060
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 304 - 0.0067
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 304 - 0.0056
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /relevamientos.css?body=1 HTTP/1.0" 304 - 0.0512
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 304 - 0.0095
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 304 - 0.0095
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /allPages.js?body=1 HTTP/1.0" 304 - 0.0077
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 304 - 0.0527
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 304 - 0.0075
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /relevamientos.js?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:28:06] "GET /application.js?body=1 HTTP/1.0" 304 - 0.0119
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /soft/relevamiento/relevamientos/new HTTP/1.0" 304 - 0.0349
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /application.css?body=1 HTTP/1.0" 304 - 0.0063
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /jquery_ujs.js?body=1 HTTP/1.0" 304 - 0.0062
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /relevamientos.css?body=1 HTTP/1.0" 304 - 0.0059
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /jquery.js?body=1 HTTP/1.0" 304 - 0.0085
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /tables.css?body=1 HTTP/1.0" 304 - 0.0054
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 304 - 0.0080
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 304 - 0.0056
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 304 - 0.0054
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 304 - 0.0100
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 304 - 0.0063
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 304 - 0.0095
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 304 - 0.0057
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 304 - 0.0105
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 304 - 0.0063
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 304 - 0.0092
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /allPages.js?body=1 HTTP/1.0" 304 - 0.0063
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /relevamientos.js?body=1 HTTP/1.0" 304 - 0.0077
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 304 - 0.0255
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 304 - 0.0523
+172.16.24.78 - - [14/Apr/2014 15:28:07] "GET /application.js?body=1 HTTP/1.0" 304 - 0.0283
+I, [2014-04-14T15:28:13.132113 #11222]  INFO -- : reaped #<Process::Status: pid 11230 exit 0> worker=1
+I, [2014-04-14T15:28:13.232711 #11222]  INFO -- : reaped #<Process::Status: pid 11227 exit 0> worker=0
+I, [2014-04-14T15:28:13.232850 #11222]  INFO -- : reaped #<Process::Status: pid 11233 exit 0> worker=2
+I, [2014-04-14T15:28:13.232915 #11222]  INFO -- : reaped #<Process::Status: pid 11236 exit 0> worker=3
+I, [2014-04-14T15:28:13.233047 #11222]  INFO -- : master complete
+I, [2014-04-14T15:31:31.772193 #11726]  INFO -- : Refreshing Gem list
+I, [2014-04-14T15:31:35.657054 #11726]  INFO -- : unlinking existing socket=/tmp/unicorn.relevamiento.sock
+I, [2014-04-14T15:31:35.657341 #11726]  INFO -- : listening on addr=/tmp/unicorn.relevamiento.sock fd=11
+I, [2014-04-14T15:31:35.663991 #11726]  INFO -- : master process ready
+I, [2014-04-14T15:31:35.669878 #11947]  INFO -- : worker=0 ready
+I, [2014-04-14T15:31:35.670622 #11950]  INFO -- : worker=1 ready
+I, [2014-04-14T15:31:35.672279 #11953]  INFO -- : worker=2 ready
+I, [2014-04-14T15:31:35.674462 #11956]  INFO -- : worker=3 ready
+172.16.24.78 - - [14/Apr/2014 15:31:36] "GET /soft/relevamiento/relevamientos/new HTTP/1.0" 200 - 0.4265
+172.16.24.78 - - [14/Apr/2014 15:31:36] "GET /application.css?body=1 HTTP/1.0" 304 - 0.0120
+172.16.24.78 - - [14/Apr/2014 15:31:36] "GET /jquery.js?body=1 HTTP/1.0" 304 - 0.0103
+172.16.24.78 - - [14/Apr/2014 15:31:36] "GET /jquery_ujs.js?body=1 HTTP/1.0" 304 - 0.0100
+172.16.24.78 - - [14/Apr/2014 15:31:36] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 304 - 0.0128
+172.16.24.78 - - [14/Apr/2014 15:31:36] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 304 - 0.0121
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /relevamientos.css?body=1 HTTP/1.0" 304 - 0.1073
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 304 - 0.0546
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 304 - 0.1129
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /tables.css?body=1 HTTP/1.0" 304 - 0.1089
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 304 - 0.0101
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 304 - 0.0107
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 304 - 0.0097
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 304 - 0.0115
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 304 - 0.0095
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 304 - 0.0097
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 304 - 0.0101
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 304 - 0.0093
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 304 - 0.0092
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 304 - 0.0097
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /allPages.js?body=1 HTTP/1.0" 304 - 0.0068
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /relevamientos.js?body=1 HTTP/1.0" 304 - 0.0072
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 304 - 0.0239
+172.16.24.78 - - [14/Apr/2014 15:31:37] "GET /application.js?body=1 HTTP/1.0" 304 - 0.0274
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /soft/relevamiento/relevamientos/new HTTP/1.0" 200 - 0.4070
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /application.css?body=1 HTTP/1.0" 304 - 0.0103
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 304 - 0.0129
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /tables.css?body=1 HTTP/1.0" 304 - 0.0134
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /relevamientos.css?body=1 HTTP/1.0" 304 - 0.0140
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /jquery_ujs.js?body=1 HTTP/1.0" 304 - 0.0084
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 304 - 0.0060
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /jquery.js?body=1 HTTP/1.0" 304 - 0.0090
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 304 - 0.0107
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 304 - 0.0097
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 304 - 0.0096
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 304 - 0.0062
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 304 - 0.0093
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 304 - 0.0059
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 304 - 0.0092
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 304 - 0.0092
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 304 - 0.0092
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 304 - 0.0097
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 304 - 0.0092
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /allPages.js?body=1 HTTP/1.0" 304 - 0.0069
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /relevamientos.js?body=1 HTTP/1.0" 304 - 0.0071
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 304 - 0.0257
+172.16.24.78 - - [14/Apr/2014 15:37:21] "GET /application.js?body=1 HTTP/1.0" 304 - 0.0703
+172.16.24.78 - - [14/Apr/2014 15:38:30] "GET /soft/relevamiento/relevamientos/new HTTP/1.0" 500 24556 0.3417
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /soft/relevamiento/relevamientos/new HTTP/1.0" 200 - 0.2443
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /application.css?body=1 HTTP/1.0" 304 - 0.0062
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 304 - 0.0066
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /relevamientos.css?body=1 HTTP/1.0" 304 - 0.0072
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /tables.css?body=1 HTTP/1.0" 304 - 0.0074
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /jquery_ujs.js?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /jquery.js?body=1 HTTP/1.0" 304 - 0.0088
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 304 - 0.0094
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 304 - 0.0090
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 304 - 0.0056
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 304 - 0.0061
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 304 - 0.0101
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 304 - 0.0100
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 304 - 0.0061
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 304 - 0.0061
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 304 - 0.0103
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 304 - 0.0062
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 304 - 0.0099
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 304 - 0.0100
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /allPages.js?body=1 HTTP/1.0" 304 - 0.0077
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /relevamientos.js?body=1 HTTP/1.0" 304 - 0.0075
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 304 - 0.0111
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 304 - 0.0236
+172.16.24.78 - - [14/Apr/2014 15:39:10] "GET /application.js?body=1 HTTP/1.0" 304 - 0.0669
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /soft/relevamiento/relevamientos/new HTTP/1.0" 200 - 0.0722
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /tables.css?body=1 HTTP/1.0" 304 - 0.0059
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /application.css?body=1 HTTP/1.0" 304 - 0.0070
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /relevamientos.css?body=1 HTTP/1.0" 304 - 0.0077
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /jquery.js?body=1 HTTP/1.0" 304 - 0.0088
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 304 - 0.0059
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /jquery_ujs.js?body=1 HTTP/1.0" 304 - 0.0067
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 304 - 0.0095
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 304 - 0.0057
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 304 - 0.0066
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 304 - 0.0105
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 304 - 0.0056
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 304 - 0.0067
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 304 - 0.0056
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 304 - 0.0100
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 304 - 0.0064
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 304 - 0.0094
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 304 - 0.0079
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /allPages.js?body=1 HTTP/1.0" 304 - 0.0082
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /application.js?body=1 HTTP/1.0" 304 - 0.0088
+172.16.24.78 - - [14/Apr/2014 15:39:32] "GET /relevamientos.js?body=1 HTTP/1.0" 304 - 0.0061
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /soft/relevamiento/relevamientos/new HTTP/1.0" 200 - 0.3213
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /tables.css?body=1 HTTP/1.0" 304 - 0.0068
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /relevamientos.css?body=1 HTTP/1.0" 304 - 0.0069
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 304 - 0.0077
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /application.css?body=1 HTTP/1.0" 304 - 0.0099
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /jquery.js?body=1 HTTP/1.0" 304 - 0.0072
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 304 - 0.0056
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 304 - 0.0054
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /jquery_ujs.js?body=1 HTTP/1.0" 304 - 0.0088
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 304 - 0.0065
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 304 - 0.0054
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 304 - 0.0110
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 304 - 0.0053
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 304 - 0.0103
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 304 - 0.0068
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 304 - 0.0094
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 304 - 0.0091
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 304 - 0.0063
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /allPages.js?body=1 HTTP/1.0" 304 - 0.0054
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 304 - 0.0087
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /relevamientos.js?body=1 HTTP/1.0" 304 - 0.0061
+172.16.24.78 - - [14/Apr/2014 15:40:58] "GET /application.js?body=1 HTTP/1.0" 304 - 0.0672
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:41:22] "GET /soft/relevamiento HTTP/1.0" 404 769 0.0198
+172.16.24.78 - - [14/Apr/2014 15:41:35] "GET /soft/relevamiento HTTP/1.0" 404 769 0.0158
+172.16.24.78 - - [14/Apr/2014 15:41:44] "GET /soft/relevamiento HTTP/1.0" 404 769 0.0210
+172.16.24.78 - - [14/Apr/2014 15:42:52] "GET /soft/relevamiento HTTP/1.0" 200 - 0.5572
+172.16.24.78 - - [14/Apr/2014 15:42:52] "GET /application.css?body=1 HTTP/1.0" 304 - 0.0066
+172.16.24.78 - - [14/Apr/2014 15:42:52] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 304 - 0.0080
+172.16.24.78 - - [14/Apr/2014 15:42:52] "GET /jquery_ujs.js?body=1 HTTP/1.0" 304 - 0.0061
+172.16.24.78 - - [14/Apr/2014 15:42:52] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 304 - 0.0056
+172.16.24.78 - - [14/Apr/2014 15:42:52] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 304 - 0.0094
+172.16.24.78 - - [14/Apr/2014 15:42:52] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 304 - 0.0057
+172.16.24.78 - - [14/Apr/2014 15:42:52] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 304 - 0.0105
+172.16.24.78 - - [14/Apr/2014 15:42:52] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 304 - 0.0069
+172.16.24.78 - - [14/Apr/2014 15:42:53] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 304 - 0.0675
+172.16.24.78 - - [14/Apr/2014 15:42:53] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 304 - 0.0067
+172.16.24.78 - - [14/Apr/2014 15:42:53] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 304 - 0.0064
+172.16.24.78 - - [14/Apr/2014 15:42:53] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 304 - 0.0103
+172.16.24.78 - - [14/Apr/2014 15:42:53] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 304 - 0.0062
+172.16.24.78 - - [14/Apr/2014 15:42:53] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 304 - 0.0059
+172.16.24.78 - - [14/Apr/2014 15:42:53] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 304 - 0.0057
+172.16.24.78 - - [14/Apr/2014 15:42:53] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:42:53] "GET /jquery.js?body=1 HTTP/1.0" 304 - 0.1786
+172.16.24.78 - - [14/Apr/2014 15:42:53] "GET /tables.css?body=1 HTTP/1.0" 304 - 0.1804
+172.16.24.78 - - [14/Apr/2014 15:42:53] "GET /allPages.js?body=1 HTTP/1.0" 304 - 0.0066
+172.16.24.78 - - [14/Apr/2014 15:42:53] "GET /relevamientos.js?body=1 HTTP/1.0" 304 - 0.0061
+172.16.24.78 - - [14/Apr/2014 15:42:53] "GET /application.js?body=1 HTTP/1.0" 304 - 0.0098
+172.16.24.78 - - [14/Apr/2014 15:42:53] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 304 - 0.0242
+172.16.24.78 - - [14/Apr/2014 15:42:53] "GET /relevamientos.css?body=1 HTTP/1.0" 304 - 0.2074
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /soft/relevamiento HTTP/1.0" 304 - 0.1557
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /application.css?body=1 HTTP/1.0" 304 - 0.0069
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /tables.css?body=1 HTTP/1.0" 304 - 0.0060
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /jquery_ujs.js?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /relevamientos.css?body=1 HTTP/1.0" 304 - 0.0056
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /jquery.js?body=1 HTTP/1.0" 304 - 0.0070
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 304 - 0.0071
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 304 - 0.0056
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 304 - 0.0062
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 304 - 0.0056
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 304 - 0.0066
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 304 - 0.0058
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 304 - 0.0098
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 304 - 0.0057
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 304 - 0.0068
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 304 - 0.0095
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 304 - 0.0057
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 304 - 0.0057
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /allPages.js?body=1 HTTP/1.0" 304 - 0.0054
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 304 - 0.0088
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /application.js?body=1 HTTP/1.0" 304 - 0.0085
+172.16.24.78 - - [14/Apr/2014 15:42:56] "GET /relevamientos.js?body=1 HTTP/1.0" 304 - 0.0054
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /soft/relevamiento HTTP/1.0" 200 - 0.3984
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /application.css?body=1 HTTP/1.0" 200 318 0.0080
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /tables.css?body=1 HTTP/1.0" 200 879 0.0061
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 200 256553 0.0163
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /relevamientos.css?body=1 HTTP/1.0" 200 - 0.0062
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /jquery.js?body=1 HTTP/1.0" 200 252882 0.0150
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /jquery_ujs.js?body=1 HTTP/1.0" 200 17894 0.0068
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 200 1758 0.0108
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 200 3965 0.0070
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 200 6425 0.0097
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 200 4403 0.0072
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 200 3353 0.0065
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 200 2371 0.0517
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 200 7758 0.0068
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 200 2995 0.0062
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 200 2683 0.0061
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 200 4463 0.0090
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 200 5210 0.0061
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 200 3330 0.0061
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 200 7788 0.0068
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 200 13 0.0078
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /allPages.js?body=1 HTTP/1.0" 200 997 0.0065
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /application.js?body=1 HTTP/1.0" 200 408 0.0090
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:43:03] "GET /relevamientos.js?body=1 HTTP/1.0" 200 32 0.0059
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:32] "GET /soft/relevamiento HTTP/1.0" 200 - 0.1807
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:33] "GET /application.css?body=1 HTTP/1.0" 200 318 0.0067
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:33] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 200 256553 0.0159
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:33] "GET /relevamientos.css?body=1 HTTP/1.0" 200 - 0.0072
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:33] "GET /tables.css?body=1 HTTP/1.0" 200 879 0.0082
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:33] "GET /jquery.js?body=1 HTTP/1.0" 200 252882 0.0151
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:33] "GET /jquery_ujs.js?body=1 HTTP/1.0" 200 17894 0.0089
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:33] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 200 1758 0.0060
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:33] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 200 2371 0.0060
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:33] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 200 6425 0.0059
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:34] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 200 3965 0.0240
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:34] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 200 4403 0.0081
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:34] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 200 3353 0.0080
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:34] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 200 7758 0.0110
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:35] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 200 2995 0.0107
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:35] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 200 2683 0.0069
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:35] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 200 4463 0.0061
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:35] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 200 5210 0.0060
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:37] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 200 7788 0.0444
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:37] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 200 3330 0.0102
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:37] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 200 13 0.0079
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:37] "GET /allPages.js?body=1 HTTP/1.0" 200 997 0.0061
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:37] "GET /application.js?body=1 HTTP/1.0" 200 408 0.0105
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:44:37] "GET /relevamientos.js?body=1 HTTP/1.0" 200 32 0.0062
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:45:28] "POST /soft/relevamiento/relevamientos HTTP/1.0" 302 - 0.1398
+200.81.44.199, 10.0.0.2 - - [14/Apr/2014 15:45:28] "GET /soft/relevamiento/relevamientos/25 HTTP/1.0" 200 - 0.1577
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /soft/relevamiento HTTP/1.0" 304 - 0.1564
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /application.css?body=1 HTTP/1.0" 304 - 0.0074
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /relevamientos.css?body=1 HTTP/1.0" 304 - 0.0060
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 304 - 0.0065
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /tables.css?body=1 HTTP/1.0" 304 - 0.0065
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /jquery_ujs.js?body=1 HTTP/1.0" 304 - 0.0057
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /jquery.js?body=1 HTTP/1.0" 304 - 0.0073
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 304 - 0.0064
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 304 - 0.0058
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 304 - 0.0062
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 304 - 0.0061
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 304 - 0.0059
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 304 - 0.0059
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 304 - 0.0062
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 304 - 0.0061
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 304 - 0.0057
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 304 - 0.0058
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 304 - 0.0058
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 304 - 0.0085
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /allPages.js?body=1 HTTP/1.0" 304 - 0.0056
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 304 - 0.0106
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 304 - 0.0127
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /application.js?body=1 HTTP/1.0" 304 - 0.0106
+200.70.33.231, 10.0.0.2 - - [14/Apr/2014 15:46:03] "GET /relevamientos.js?body=1 HTTP/1.0" 304 - 0.0077
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /soft/relevamiento HTTP/1.0" 200 - 0.6918
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /application.css?body=1 HTTP/1.0" 304 - 0.0122
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /tables.css?body=1 HTTP/1.0" 304 - 0.0069
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 304 - 0.0069
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 304 - 0.0075
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 304 - 0.0071
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 304 - 0.0101
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 304 - 0.0062
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /jquery.js?body=1 HTTP/1.0" 304 - 0.0634
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /jquery_ujs.js?body=1 HTTP/1.0" 304 - 0.0638
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /relevamientos.css?body=1 HTTP/1.0" 304 - 0.0640
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 304 - 0.0061
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 304 - 0.0063
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 304 - 0.0059
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 304 - 0.0098
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 304 - 0.0078
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 304 - 0.0056
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 304 - 0.0060
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 304 - 0.0055
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 304 - 0.0075
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 304 - 0.0073
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /allPages.js?body=1 HTTP/1.0" 304 - 0.0057
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /application.js?body=1 HTTP/1.0" 304 - 0.0085
+172.16.24.78 - - [14/Apr/2014 16:05:52] "GET /relevamientos.js?body=1 HTTP/1.0" 304 - 0.0056
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /soft/relevamiento HTTP/1.0" 200 - 0.4339
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /relevamientos.css?body=1 HTTP/1.0" 304 - 0.0063
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /application.css?body=1 HTTP/1.0" 304 - 0.0066
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /tables.css?body=1 HTTP/1.0" 304 - 0.0062
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 304 - 0.0062
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /jquery_ujs.js?body=1 HTTP/1.0" 304 - 0.0063
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 304 - 0.0060
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 304 - 0.0061
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 304 - 0.0063
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 304 - 0.0064
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 304 - 0.0066
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 304 - 0.0069
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 304 - 0.0063
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 304 - 0.0062
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 304 - 0.0062
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /jquery.js?body=1 HTTP/1.0" 304 - 0.0099
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 304 - 0.0064
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 304 - 0.0070
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 304 - 0.0505
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 304 - 0.0081
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /allPages.js?body=1 HTTP/1.0" 304 - 0.0068
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /application.js?body=1 HTTP/1.0" 304 - 0.0098
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /relevamientos.js?body=1 HTTP/1.0" 304 - 0.0060
+172.16.24.78 - - [14/Apr/2014 16:06:04] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 304 - 0.0486
+172.16.24.78 - - [14/Apr/2014 16:06:12] "GET /soft/relevamiento/localidades HTTP/1.0" 404 789 0.0131
+172.16.24.78 - - [14/Apr/2014 16:06:15] "GET /soft/relevamiento/localidades HTTP/1.0" 404 789 0.0129
+172.16.24.78 - - [14/Apr/2014 16:06:25] "GET /soft/relevamiento/localidades HTTP/1.0" 404 789 0.0133
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /soft/relevamiento HTTP/1.0" 304 - 0.1430
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /soft/relevamiento HTTP/1.0" 200 - 0.1178
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /application.css?body=1 HTTP/1.0" 304 - 0.0064
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /bootstrap_and_overrides.css?body=1 HTTP/1.0" 304 - 0.0073
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /relevamientos.css?body=1 HTTP/1.0" 304 - 0.0070
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /tables.css?body=1 HTTP/1.0" 304 - 0.0062
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /jquery_ujs.js?body=1 HTTP/1.0" 304 - 0.0060
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /jquery.js?body=1 HTTP/1.0" 304 - 0.0066
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /twitter/bootstrap/bootstrap-transition.js?body=1 HTTP/1.0" 304 - 0.0059
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /twitter/bootstrap/bootstrap-alert.js?body=1 HTTP/1.0" 304 - 0.0063
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /twitter/bootstrap/bootstrap-dropdown.js?body=1 HTTP/1.0" 304 - 0.0056
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /twitter/bootstrap/bootstrap-scrollspy.js?body=1 HTTP/1.0" 304 - 0.0060
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /twitter/bootstrap/bootstrap-tooltip.js?body=1 HTTP/1.0" 304 - 0.0056
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /twitter/bootstrap/bootstrap-tab.js?body=1 HTTP/1.0" 304 - 0.0064
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /twitter/bootstrap/bootstrap-popover.js?body=1 HTTP/1.0" 304 - 0.0065
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /twitter/bootstrap/bootstrap-button.js?body=1 HTTP/1.0" 304 - 0.0057
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /twitter/bootstrap/bootstrap-collapse.js?body=1 HTTP/1.0" 304 - 0.0056
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /twitter/bootstrap/bootstrap-typeahead.js?body=1 HTTP/1.0" 304 - 0.0065
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /twitter/bootstrap/bootstrap-carousel.js?body=1 HTTP/1.0" 304 - 0.0057
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /twitter/bootstrap/bootstrap-affix.js?body=1 HTTP/1.0" 304 - 0.0074
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /twitter/bootstrap.js?body=1 HTTP/1.0" 304 - 0.0081
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /allPages.js?body=1 HTTP/1.0" 304 - 0.0057
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /application.js?body=1 HTTP/1.0" 304 - 0.0088
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /relevamientos.js?body=1 HTTP/1.0" 304 - 0.0065
+172.16.24.78 - - [14/Apr/2014 16:06:28] "GET /twitter/bootstrap/bootstrap-modal.js?body=1 HTTP/1.0" 304 - 0.0678

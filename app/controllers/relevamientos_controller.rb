@@ -44,7 +44,7 @@ class RelevamientosController < ApplicationController
 
     respond_to do |format|
       if @relevamiento.save
-        format.html { redirect_to @relevamiento, notice: 'Relevamiento was successfully created.' }
+        format.html { redirect_to @relevamiento, notice: 'Relevamiento ha sido creado correctamente.' }
         format.json { render json: @relevamiento, status: :created, location: @relevamiento }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class RelevamientosController < ApplicationController
 
     respond_to do |format|
       if @relevamiento.update_attributes(params[:relevamiento])
-        format.html { redirect_to @relevamiento, notice: 'Relevamiento was successfully updated.' }
+        format.html { redirect_to @relevamiento, notice: 'Relevamiento ha sido actualizado correctamente.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

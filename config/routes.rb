@@ -1,4 +1,7 @@
 Mysecurity::Application.routes.draw do
+
+  scope '/soft/relevamiento' do
+
   #resources :escuelas
 
   resources :relevamientos
@@ -80,6 +83,6 @@ Mysecurity::Application.routes.draw do
   #
   #
 
-  root :to => "home#index"
-
+  root :to => "relevamientos#new"
+  end
 end
