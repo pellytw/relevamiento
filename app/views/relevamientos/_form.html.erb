@@ -11,11 +11,21 @@
     </div>
   <% end %>
 
+  <style type="text/css">
+    h4{
+      margin: 0px;
+      padding: 0px;
+    }
+  </style>
+
   <% @tipo_roles = ["Alumno","Docente","Auxiliar de educación"] %>
 
   <div class="row">
-    <h4>Datos Personales</h4>
+    <div class="span12" style="margin-top:20px;margin-bottom:20px;">
+      <span class="label label-info"><h4>Datos personales</h4></span>
+    </div>
   </div>
+  <hr/>
 
   <div class="row">
     <div class="span12">
@@ -142,14 +152,16 @@
       <div class="control-group success">
         <label class="control-label"><strong>Teléfono de contacto:</strong></label>
         <div class="controls">
-          <%= f.text_field :telefono_contacto, :id => "poronga" %>
+          <%= f.text_field :telefono_contacto %>
         </div>
       </div>
     </div>    
   </div>
 
   <div class="row">
-    <h4>Condición</h4>
+    <div class="span12" style="margin-top:20px;margin-bottom:20px;">
+      <span class="label label-info"><h4>Condición</h4></span>
+    </div>
   </div>
 
   <hr/>
@@ -160,9 +172,13 @@
         <label class="control-label"><strong>Indique su condición:</strong></label>
         <div class="controls">
           <select name="relevamiento[rol]" id="relevamiento_rol">
-          <option selected="selected" value="1">Seleccione una función</option>
+          <option value="1">Seleccione una función</option>
             <% @tipo_roles.each do |tp| %>
-              <option value="<%=tp%>"><%=tp%></option>
+              <% if @relevamiento.rol == tp %>
+                <option selected="selected" value="<%=tp%>"><%=tp%></option>
+              <% else %>
+                <option value="<%=tp%>"><%=tp%></option>
+              <% end %>
             <% end %>
           </select>
         </div>
@@ -170,13 +186,13 @@
     </div>    
   </div>
 
-  <hr/>
-
   <div id="alumno">
     <div class="row">
-      <h4>Alumno</h4>
-      <hr/>
+      <div class="span12" style="margin-top:20px;margin-bottom:20px;">
+        <span class="label label-success"><h4>Alumno</h4></span>
+      </div>
     </div>
+    <hr/>
 
     <div class="row">
       <div class="span12">
@@ -206,10 +222,13 @@
 
   <div id="docente">
 
-    <div class="row">
-      <h4>Docente</h4>
-      <hr/>
+
+  <div class="row">
+    <div class="span12" style="margin-top:20px;margin-bottom:20px;">
+      <span class="label label-success"><h4>Docente</h4></span>
     </div>
+  </div>
+  <hr/>
     
     <div class="row">
       <div class="span12">
@@ -257,10 +276,12 @@
 
   <div id="aux">
 
-    <div class="row">
-      <h4>Auxiliar de educación</h4>
-      <hr/>
+  <div class="row">
+    <div class="span12" style="margin-top:20px;margin-bottom:20px;">
+      <span class="label label-success"><h4>Auxiliar de educación</h4></span>
     </div>
+  </div>
+  <hr/>
     
     <div class="row">
       <div class="span12">
@@ -285,26 +306,30 @@
       </div>
     </div>
   </div>
-  <div id="cuadras" class="row">
-    <hr/>
-    <div class="row">
-      <h4>Distancia a la Escuela</h4>
-      <hr/>
-    </div>
+  <div id="cuadras">
     
-    <div class="span6">
-      <div class="control-group success">
-        <label class="control-label"><strong>Cantidad de cuadras a la escuela:</strong></label>
-        <div class="controls">
-          <%= f.number_field :cant_cuadras, :class => "input_alumno", :id => "input_cant_cuadras" %>
-        </div>
+    <div class="row">
+      <div class="span12" style="margin-top:20px;margin-bottom:20px;">
+        <span class="label"><h4>Distancia a la escuela</h4></span>
       </div>
     </div>
-    <div class="span6">
-      <div class="control-group success">
-        <label class="control-label"><strong>Cantidad de kilómetros a la escuela:</strong></label>
-        <div class="controls">
-          <%= f.text_field :distancia_km, :id => "input_distancia_km" %>
+    <hr/>
+    
+    <div class="row">
+      <div class="span6">
+        <div class="control-group success">
+          <label class="control-label"><strong>Cantidad de cuadras a la escuela:</strong></label>
+          <div class="controls">
+            <%= f.number_field :cant_cuadras, :class => "input_alumno", :id => "input_cant_cuadras" %>
+          </div>
+        </div>
+      </div>
+      <div class="span6">
+        <div class="control-group success">
+          <label class="control-label"><strong>Cantidad de kilómetros a la escuela:</strong></label>
+          <div class="controls">
+            <%= f.text_field :distancia_km, :id => "input_distancia_km" %>
+          </div>
         </div>
       </div>
     </div>
@@ -325,6 +350,9 @@
     $("#aux_activo").addClass('hidden');
     $("#frente_alumno").addClass('hidden');    
     $("#cuadras").addClass('hidden');
+
+    
+    //$( "#foo" ).trigger( "click" );
 
     $( "#relevamiento_rol" ).change(function() {
       if ($( "#relevamiento_rol option:selected" ).text() == "Alumno"){
@@ -465,6 +493,9 @@
         $("#input_turno_docente").val("");
       };
     });
+
+    $("#relevamiento_rol").trigger("change");
+
     $("#check_alumno_regular").click(function(){
       if ($(this).attr("checked") == "checked"){
         $("#regular").removeClass('hidden');
