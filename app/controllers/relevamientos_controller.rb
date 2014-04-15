@@ -34,7 +34,14 @@ class RelevamientosController < ApplicationController
 
   # GET /relevamientos/1/edit
   def edit
-    @relevamiento = Relevamiento.find(params[:id])
+    if session["id_actual"].to_s == params[:id] then
+      @relevamiento = Relevamiento.find(params[:id])
+    else
+      respond_to do |format|
+        format.html { redirect_to root_url, notice: "Usted no puede editar este relevamiento" }
+        format.json { head :no_content }
+      end
+    end
   end
 
   # POST /relevamientos
@@ -44,6 +51,7 @@ class RelevamientosController < ApplicationController
 
     respond_to do |format|
       if @relevamiento.save
+        session["id_actual"] = @relevamiento.id
         format.html { redirect_to @relevamiento, notice: 'Relevamiento ha sido creado correctamente.' }
         format.json { render json: @relevamiento, status: :created, location: @relevamiento }
       else
