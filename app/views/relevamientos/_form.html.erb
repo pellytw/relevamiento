@@ -1,3 +1,9 @@
+<%= stylesheet_link_tag 'select2' %>
+<%= javascript_include_tag 'select2' %>
+<script>
+  $(document).ready(function() { $("#relevamiento_escuela_id").select2(); });
+</script>
+
 <%= form_for(@relevamiento, :html => { :class => "form-horizontal"}) do |f| %>
   <% if @relevamiento.errors.any? %>
     <div id="error_explanation" class = "alert alert-error" >
@@ -60,7 +66,7 @@
   <div class="row">
     <div class="span6">
       <div class="control-group success">
-        <label class="control-label"><strong>Escuela:</strong></label>
+        <label class="control-label"><strong>Establecimiento:</strong></label>
         <div class="controls">
           <%= f.collection_select(:escuela_id, Escuela.all, :id, :to_s) %>
         </div>
@@ -310,7 +316,7 @@
     
     <div class="row">
       <div class="span12" style="margin-top:20px;margin-bottom:20px;">
-        <span class="label"><h4>Distancia a la escuela</h4></span>
+        <span class="label"><h4>Distancia al establecimiento</h4></span>
       </div>
     </div>
     <hr/>
@@ -318,7 +324,7 @@
     <div class="row">
       <div class="span6">
         <div class="control-group success">
-          <label class="control-label"><strong>Cantidad de cuadras a la escuela:</strong></label>
+          <label class="control-label"><strong>Cantidad de cuadras al establecimiento:</strong></label>
           <div class="controls">
             <%= f.number_field :cant_cuadras, :class => "input_alumno", :id => "input_cant_cuadras" %>
           </div>
@@ -326,7 +332,7 @@
       </div>
       <div class="span6">
         <div class="control-group success">
-          <label class="control-label"><strong>Cantidad de kilómetros a la escuela:</strong></label>
+          <label class="control-label"><strong>Cantidad de kilómetros al establecimiento:</strong></label>
           <div class="controls">
             <%= f.text_field :distancia_km, :id => "input_distancia_km" %>
           </div>
