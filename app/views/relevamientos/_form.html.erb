@@ -26,12 +26,9 @@
 
   <% @tipo_roles = ["Alumno","Docente","Auxiliar de educación"] %>
 
-  <div class="row">
-    <div class="span12" style="margin-top:20px;margin-bottom:20px;">
-      <span class="label label-info"><h4>Datos personales</h4></span>
-    </div>
-  </div>
-  <hr/>
+
+
+  <legend>Datos Personales</legend> 
 
   <div class="row">
     <div class="span12">
@@ -62,43 +59,26 @@
       </div>
     </div>
   </div>
- 
-  <div class="row">
-    <div class="span6">
-      <div class="control-group success">
-        <label class="control-label"><strong>Establecimiento:</strong></label>
-        <div class="controls">
-          <%= f.collection_select(:escuela_id, Escuela.all, :id, :to_s) %>
-        </div>
-      </div>
-    </div>
-    <div class="span6">
-      <div class="control-group success">
-        <label class="control-label"><strong>Nivel:</strong></label>
-        <div class="controls">
-          <%= f.collection_select(:nivel_id, Nivel.all, :id, :nombre) %>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="row">
     <div class="span12">
       <div class="control-group success">
-        <label class="control-label"><strong>Tipo de gestión:</strong></label>
+        <label class="control-label"><strong>Teléfono de contacto:</strong></label>
         <div class="controls">
-          <%= f.collection_select(:tipo_gestion_id, TipoGestion.all, :id, :nombre) %>
+          <%= f.text_field :telefono_contacto %>
         </div>
       </div>
-    </div>
+    </div>    
   </div>
- 
+
+  <legend>Domicilio Particular</legend> 
+
   <div class="row">
     <div class="span12">
       <div class="control-group success">
         <label class="control-label"><strong>Calle:</strong></label>
         <div class="controls">
-          <%= f.text_field :calle, :style => "width:100%;" %>
+          <%= f.text_field :calle, :style => "width:100%;", :title => "Ingrese su domicilio" %>
         </div>
       </div>
     </div>
@@ -142,23 +122,44 @@
     </div>
   </div>
 
+  <legend>Establecimiento Educativo</legend>
+ 
+  <div class="row">
+    <div class="span6">
+      <div class="control-group success">
+        <label class="control-label"><strong>Establecimiento:</strong></label>
+        <div class="controls">
+          <%= f.collection_select(:escuela_id, Escuela.all, :id, :to_s) %>
+        </div>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="control-group success">
+        <label class="control-label"><strong>Nivel:</strong></label>
+        <div class="controls">
+          <%= f.collection_select(:nivel_id, Nivel.all, :id, :nombre) %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span12">
+      <div class="control-group success">
+        <label class="control-label"><strong>Tipo de gestión:</strong></label>
+        <div class="controls">
+          <%= f.collection_select(:tipo_gestion_id, TipoGestion.all, :id, :nombre) %>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="row">
     <div class="span12">
       <div class="control-group success">
         <label class="control-label"><strong>Servicio de transporte público que utiliza:</strong></label>
         <div class="controls">
           <%= f.text_field :servicio_transporte, :style => "width:100%;" %>
-        </div>
-      </div>
-    </div>    
-  </div>
-
-  <div class="row">
-    <div class="span12">
-      <div class="control-group success">
-        <label class="control-label"><strong>Teléfono de contacto:</strong></label>
-        <div class="controls">
-          <%= f.text_field :telefono_contacto %>
         </div>
       </div>
     </div>    
@@ -356,6 +357,9 @@
     $("#aux_activo").addClass('hidden');
     $("#frente_alumno").addClass('hidden');    
     $("#cuadras").addClass('hidden');
+
+    // ToolTip
+    $('#relevamiento_calle').tooltip();
 
     
     //$( "#foo" ).trigger( "click" );
