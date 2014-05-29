@@ -2,6 +2,8 @@ Mysecurity::Application.routes.draw do
 
   scope '/soft/relevamiento' do
 
+  get "relevamientos/sitio_en_construccion", to: "relevamientos#sitio_en_construccion"
+
   #resources :escuelas
 
   resources :relevamientos
@@ -83,6 +85,7 @@ Mysecurity::Application.routes.draw do
   #
   #
 
-  root :to => "relevamientos#new"
+  #root :to => "relevamientos#new"
+  root :to => "relevamientos#sitio_en_construccion"
   end
 end

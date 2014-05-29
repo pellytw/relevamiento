@@ -34461,3 +34461,1067 @@ Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (68.8ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (142.1ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (27.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20120201182115)
+  [1m[35m (71.1ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (124.5ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35m (124.6ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)
+  [1m[36m (32.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120201182115')[0m
+Migrating to CreateRoles (20120224180650)
+  [1m[35m (68.2ms)[0m  CREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (32.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120224180650')[0m
+Migrating to CreateRoleRoles (20120224181028)
+  [1m[35m (65.6ms)[0m  CREATE TABLE `role_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `role_id` int(11), `parent_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (32.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120224181028')[0m
+Migrating to CreateUserRoles (20120302182538)
+  [1m[35m (65.6ms)[0m  CREATE TABLE `user_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `role_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (32.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120302182538')[0m
+Migrating to CreateRolePermissions (20120410182942)
+  [1m[35m (65.2ms)[0m  CREATE TABLE `role_permissions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `role_id` int(11), `regulator` varchar(255), `conduct` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (32.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120410182942')[0m
+Migrating to CreateTipoDeDocumentos (20140414120857)
+  [1m[35m (65.3ms)[0m  CREATE TABLE `tipo_de_documentos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (32.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140414120857')[0m
+Migrating to CreateNiveles (20140414120913)
+  [1m[35m (65.5ms)[0m  CREATE TABLE `niveles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (32.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140414120913')[0m
+Migrating to CreateTipoGestiones (20140414120938)
+  [1m[35m (65.1ms)[0m  CREATE TABLE `tipo_gestiones` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (32.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140414120938')[0m
+Migrating to CreateLocalidades (20140414121017)
+  [1m[35m (65.4ms)[0m  CREATE TABLE `localidades` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `region_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (32.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140414121017')[0m
+Migrating to CreateRegiones (20140414121028)
+  [1m[35m (66.6ms)[0m  CREATE TABLE `regiones` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (32.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140414121028')[0m
+Migrating to CreateRelevamientos (20140414121312)
+  [1m[35m (56.7ms)[0m  CREATE TABLE `relevamientos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre_y_apellido` varchar(255), `tipo_de_documento_id` int(11), `nro_documento` int(11), `escuela_id` int(11), `nivel_id` int(11), `tipo_gestion_id` int(11), `localidad_id` int(11), `calle` varchar(255), `nro` int(11), `piso` varchar(255), `depto` varchar(255), `grado_anio_alumno` int(11), `regular` tinyint(1), `cant_cuadras` int(11), `distancia_km` float, `servicio_transporte` varchar(255), `telefono_contacto` varchar(255), `rol` varchar(255), `activo_pasivo_docente` tinyint(1), `frente_alumnos` tinyint(1), `grado_docente` varchar(255), `turno_docente` varchar(255), `activo_pasivo_aux` tinyint(1), `lugar_auxiliares` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (24.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140414121312')[0m
+Migrating to CreateEscuelas (20140414122447)
+  [1m[35m (48.2ms)[0m  CREATE TABLE `escuelas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nro` varchar(255), `nombre` varchar(255), `localidad` varchar(255), `nivel` varchar(255), `region` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (24.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140414122447')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-05-29 09:50:39 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/rails.png"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/pepeu/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/pepeu/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/pepeu/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/pepeu/.rvm/gems/ruby-1.9.3-p286@global/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/soft/relevamiento" for 127.0.0.1 at 2014-05-29 09:51:14 -0300
+Processing by RelevamientosController#sitio_en_construccion as HTML
+  Rendered relevamientos/sitio_en_construccion.html.erb within layouts/application (0.2ms)
+Compiled bootstrap_and_overrides.css  (627ms)  (pid 5052)
+Compiled tables.css  (0ms)  (pid 5052)
+Compiled application.css  (638ms)  (pid 5052)
+Compiled relevamientos.css  (51ms)  (pid 5052)
+Compiled jquery.js  (1ms)  (pid 5052)
+Compiled jquery_ujs.js  (0ms)  (pid 5052)
+Compiled twitter/bootstrap/bootstrap-transition.js  (0ms)  (pid 5052)
+Compiled twitter/bootstrap/bootstrap-alert.js  (0ms)  (pid 5052)
+Compiled twitter/bootstrap/bootstrap-modal.js  (0ms)  (pid 5052)
+Compiled twitter/bootstrap/bootstrap-dropdown.js  (0ms)  (pid 5052)
+Compiled twitter/bootstrap/bootstrap-scrollspy.js  (0ms)  (pid 5052)
+Compiled twitter/bootstrap/bootstrap-tab.js  (0ms)  (pid 5052)
+Compiled twitter/bootstrap/bootstrap-tooltip.js  (0ms)  (pid 5052)
+Compiled twitter/bootstrap/bootstrap-popover.js  (0ms)  (pid 5052)
+Compiled twitter/bootstrap/bootstrap-button.js  (0ms)  (pid 5052)
+Compiled twitter/bootstrap/bootstrap-collapse.js  (0ms)  (pid 5052)
+Compiled twitter/bootstrap/bootstrap-carousel.js  (0ms)  (pid 5052)
+Compiled twitter/bootstrap/bootstrap-typeahead.js  (0ms)  (pid 5052)
+Compiled twitter/bootstrap/bootstrap-affix.js  (0ms)  (pid 5052)
+Compiled twitter/bootstrap.js  (191ms)  (pid 5052)
+Compiled allPages.js  (0ms)  (pid 5052)
+Compiled application.js  (239ms)  (pid 5052)
+Compiled relevamientos.js  (57ms)  (pid 5052)
+Completed 200 OK in 1103ms (Views: 1102.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/soft/relevamiento/app/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /bootstrap_and_overrides.css - 200 OK (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.css?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /relevamientos.css - 200 OK (3ms)
+
+
+Started GET "/soft/relevamiento/app/assets/tables.css?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /tables.css - 200 OK (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (2ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (2ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (3ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (2ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (2ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (3ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (4ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (3ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (3ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (4ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (5ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (3ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (4ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /twitter/bootstrap.js - 200 OK (13ms)
+
+
+Started GET "/soft/relevamiento/app/assets/allPages.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /allPages.js - 200 OK (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /application.js - 200 OK (22ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.js?body=1" for 127.0.0.1 at 2014-05-29 09:51:15 -0300
+Served asset /relevamientos.js - 200 OK (2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/soft/relevamiento" for 127.0.0.1 at 2014-05-29 12:28:54 -0300
+Processing by RelevamientosController#sitio_en_construccion as HTML
+  Rendered relevamientos/sitio_en_construccion.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 385ms (Views: 384.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/soft/relevamiento/app/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /bootstrap_and_overrides.css - 200 OK (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/tables.css?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /tables.css - 200 OK (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /jquery.js - 200 OK (4ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.css?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /relevamientos.css - 200 OK (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /jquery_ujs.js - 200 OK (59ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (44ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (4ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (4ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (4ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (4ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (3ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (5ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (2ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (3ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (2ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (6ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (4ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (3ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /twitter/bootstrap.js - 200 OK (43ms)
+
+
+Started GET "/soft/relevamiento/app/assets/allPages.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /allPages.js - 200 OK (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /application.js - 200 OK (14ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.js?body=1" for 127.0.0.1 at 2014-05-29 12:28:55 -0300
+Served asset /relevamientos.js - 200 OK (2ms)
+
+
+Started GET "/soft/relevamiento/relevamiento/new" for 127.0.0.1 at 2014-05-29 12:29:08 -0300
+
+ActionController::RoutingError (No route matches [GET] "/soft/relevamiento/relevamiento/new"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/pepeu/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/pepeu/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/pepeu/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/pepeu/.rvm/gems/ruby-1.9.3-p286@global/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/soft/relevamiento/relevamientos/new" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Processing by RelevamientosController#new as HTML
+  [1m[36mTipoDeDocumento Load (0.2ms)[0m  [1mSELECT `tipo_de_documentos`.* FROM `tipo_de_documentos` [0m
+  [1m[35mLocalidad Load (0.3ms)[0m  SELECT `localidades`.* FROM `localidades` 
+  [1m[36mEscuela Load (0.3ms)[0m  [1mSELECT `escuelas`.* FROM `escuelas` [0m
+  [1m[35mNivel Load (0.2ms)[0m  SELECT `niveles`.* FROM `niveles` 
+  [1m[36mTipoGestion Load (0.2ms)[0m  [1mSELECT `tipo_gestiones`.* FROM `tipo_gestiones` [0m
+  Rendered relevamientos/_form.html.erb (246.3ms)
+  Rendered relevamientos/new.html.erb within layouts/application (275.8ms)
+Completed 200 OK in 310ms (Views: 277.6ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.css?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /relevamientos.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/tables.css?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /twitter/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/allPages.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /allPages.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /relevamientos.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/select2.css?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /select2.css - 200 OK (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/select2.js?body=1" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /select2.js - 200 OK (3ms)
+
+
+Started GET "/soft/relevamiento/app/assets/logo.png" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /logo.png - 200 OK (11ms)
+
+
+Started GET "/soft/relevamiento/app/assets/select2.png" for 127.0.0.1 at 2014-05-29 12:29:16 -0300
+Served asset /select2.png - 200 OK (1ms)
+
+
+Started GET "/soft/relevamiento/" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Processing by RelevamientosController#sitio_en_construccion as HTML
+  Rendered relevamientos/sitio_en_construccion.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/tables.css?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.css?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /relevamientos.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /twitter/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/allPages.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /allPages.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.js?body=1" for 127.0.0.1 at 2014-05-29 12:34:23 -0300
+Served asset /relevamientos.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Processing by RelevamientosController#sitio_en_construccion as HTML
+  Rendered relevamientos/sitio_en_construccion.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/tables.css?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.css?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /relevamientos.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (24ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (3ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/allPages.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /allPages.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /twitter/bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.js?body=1" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /relevamientos.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/logo.png" for 127.0.0.1 at 2014-05-29 12:37:21 -0300
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Processing by RelevamientosController#sitio_en_construccion as HTML
+  Rendered relevamientos/sitio_en_construccion.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/tables.css?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.css?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /relevamientos.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /twitter/bootstrap.js - 304 Not Modified (26ms)
+
+
+Started GET "/soft/relevamiento/app/assets/allPages.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /allPages.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /relevamientos.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/logo.png" for 127.0.0.1 at 2014-05-29 12:42:03 -0300
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Processing by RelevamientosController#sitio_en_construccion as HTML
+  Rendered relevamientos/sitio_en_construccion.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/tables.css?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.css?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /relevamientos.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (2ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /twitter/bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/soft/relevamiento/app/assets/allPages.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /allPages.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.js?body=1" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /relevamientos.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/logo.png" for 127.0.0.1 at 2014-05-29 12:42:20 -0300
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Processing by RelevamientosController#sitio_en_construccion as HTML
+  Rendered relevamientos/sitio_en_construccion.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.css?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /relevamientos.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/tables.css?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (2ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (2ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /twitter/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/allPages.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /allPages.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.js?body=1" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /relevamientos.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/logo.png" for 127.0.0.1 at 2014-05-29 12:46:59 -0300
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/relevamientos/new" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Processing by RelevamientosController#new as HTML
+  [1m[35mTipoDeDocumento Load (0.1ms)[0m  SELECT `tipo_de_documentos`.* FROM `tipo_de_documentos` 
+  [1m[36mLocalidad Load (0.1ms)[0m  [1mSELECT `localidades`.* FROM `localidades` [0m
+  [1m[35mEscuela Load (0.1ms)[0m  SELECT `escuelas`.* FROM `escuelas` 
+  [1m[36mNivel Load (0.1ms)[0m  [1mSELECT `niveles`.* FROM `niveles` [0m
+  [1m[35mTipoGestion Load (0.1ms)[0m  SELECT `tipo_gestiones`.* FROM `tipo_gestiones` 
+  Rendered relevamientos/_form.html.erb (11.2ms)
+  Rendered relevamientos/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/tables.css?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /tables.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.css?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /relevamientos.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (2ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (1ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /twitter/bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/soft/relevamiento/app/assets/allPages.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /allPages.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /application.js - 304 Not Modified (33ms)
+
+
+Started GET "/soft/relevamiento/app/assets/relevamientos.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /relevamientos.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/select2.css?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /select2.css - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/select2.js?body=1" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /select2.js - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/logo.png" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/soft/relevamiento/app/assets/select2.png" for 127.0.0.1 at 2014-05-29 12:48:26 -0300
+Served asset /select2.png - 304 Not Modified (0ms)
